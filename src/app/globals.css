@@ -1,0 +1,37 @@
+body {
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: FiraSans;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../assets/fonts/FiraSans-Regular.woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../assets/fonts/FiraSans-Bold.woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../assets/fonts/FiraSans-Italic.woff');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../assets/fonts/FiraSans-BoldItalic.woff');
+  font-weight: bold;
+  font-style: italic;
+}

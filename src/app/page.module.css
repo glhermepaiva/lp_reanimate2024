@@ -1,0 +1,489 @@
+.page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  font-family: FiraSans;
+}
+
+.gradient1 {
+  background-image: url(../assets/gradient1.png);
+  width: 1400px;
+  height: 2000px;
+  position: absolute;
+  top: -700px;
+  left: -820px;
+  z-index: 0;
+}
+
+.header {
+  height: 180px;
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLogo {
+  background-image: url(../assets/logo-reanimate.png);
+  width: 240px;
+  height: 87px;
+  cursor: pointer;
+}
+
+.headerTopicsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.headerTopic {
+  font-size: 18px;
+  margin: 0 35px 0 0;
+  cursor: pointer;
+}
+
+.headerLoginButton {
+  background-image: url(../assets/loginbutton.png);
+  width: 178px;
+  height: 42px;
+  cursor: pointer;
+}
+
+.gradient2 {
+  background-image: url(../assets/gradient2.png);
+  width: 1800px;
+  height: 1300px;
+  position: absolute;
+  top: 100px;
+  right: -1000px;
+}
+
+.main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainFirstSection {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.mainLeft {
+  margin: 0 0 0 100px;
+}
+
+.mainText {
+  background-image: url(../assets/maintext.png);
+  width: 626px;
+  height: 287px;
+  margin: 100px 0 50px 0;
+  z-index: 1;
+}
+
+.mainContrateButton {
+  background-image: url(../assets/contratebutton.png);
+  width: 375px;
+  height: 76px;
+  margin: 0 0 0 0;
+}
+
+.mainRight {
+  width: 814px;
+}
+
+.mainAutomatizeArt {
+  background-image: url(../assets/automatizese.png);
+  width: 502px;
+  height: 571px;
+  margin: 70px 0 0 250px;
+  position: absolute;
+}
+
+.mainStars {
+  background-image: url(../assets/stars.png);
+  width: 126px;
+  height: 30px;
+  margin: 200px auto 0 auto;
+}
+
+.qualitiesContainer {
+  width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+  z-index: 1;
+  margin: 150px auto 0 auto;
+}
+
+.qualitiesContainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qualitiesContainer h2 {
+  text-align: center;
+  margin: 30px 0 -20px 0;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.qualitiesContainer p {
+  width: 313px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.iconCheck {
+  background-image: url(../assets/icon_check.png);
+  width: 98px;
+  height: 89px;
+  margin: 0 auto 0 auto;
+}
+
+.iconProject {
+  background-image: url(../assets/icon_project.png);
+  width: 87px;
+  height: 89px;
+  margin: 0 auto 0 auto;
+}
+
+.iconClock {
+  background-image: url(../assets/icon_clock.png);
+  width: 83px;
+  height: 84px;
+  margin: 0 auto 0 auto;
+}
+
+.gradient3 {
+  background-image: url(../assets/gradient3.png);
+  width: 2380px;
+  height: 1700px;
+  position: absolute;
+  top: 1100px;
+  left: -700px;
+}
+
+.gradient4 {
+  background-image: url(../assets/gradient4.png);
+  width: 2400px;
+  height: 1800px;
+  position: absolute;
+  top: 2300px;
+  right: -900px;
+}
+
+.modulesContainer {
+  width: 1440px;
+  margin: 100px auto 0 auto;
+  background-color:rgba(245, 245, 245, 0.5);
+  border-radius: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.modulesContainer h1 {
+  color: #E8336A;
+  font-size: 48px;
+  margin: 0 0 -20px 0;
+  line-height: 48px;
+}
+
+.modulesContainerText1 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.logosContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 1235px;
+  margin: 30px 0 30px 0;
+}
+
+.logoMM {
+  background-image: url(../assets/logo_mm.png);
+  width: 422px;
+  height: 100px;
+}
+
+.logoRA {
+  background-image: url(../assets/logo_ra.png);
+  width: 381px;
+  height: 100px;
+}
+
+.logoDA {
+  background-image: url(../assets/logo_da.png);
+  width: 372px;
+  height: 100px;
+}
+
+.modulesContainerText2 {
+  font-size: 24px;
+  width: 470px;
+  text-align: center;
+}
+
+.modulesDetails p {
+  font-size: 24px;
+  width: 470px;
+}
+
+.modulesDetailsContainer {
+  display: flex;
+  margin: 75px 0 0 0;
+}
+
+.modulesDetailsContainerInfos {
+  padding: 30px 0 0 0;
+}
+
+.pcMM {
+  background-image: url(../assets/pc-mm.png);
+  width: 658px;
+  height: 442px;
+}
+
+.pcRA {
+  background-image: url(../assets/pc-ra.png);
+  width: 658px;
+  height: 442px;
+}
+
+.pcDA {
+  background-image: url(../assets/pc-da.png);
+  width: 658px;
+  height: 442px;
+}
+
+.buttonMM {
+  background-image: url(../assets/button-mm.png);
+  width: 375px;
+  height: 76px;
+  cursor: pointer;
+}
+
+.buttonRA {
+  background-image: url(../assets/button-ra.png);
+  width: 375px;
+  height: 76px;
+  cursor: pointer;
+}
+
+.buttonDA {
+  background-image: url(../assets/button-da.png);
+  width: 375px;
+  height: 76px;
+  cursor: pointer;
+}
+
+.aboutPoint {
+  background-image: url(../assets/about-point.png);
+  width: 922px;
+  height: 258px;
+  margin: 100px 0 -225px 0;
+}
+
+.carousel {
+  margin: 250px auto 250px auto;
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.carouselTitle {
+  margin: 0 auto 50px auto;
+  color: #E8336A;
+  font-size: 48px;
+}
+
+.client1 {
+  background-image: url(../assets/clients/client1.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client2 {
+  background-image: url(../assets/clients/client2.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client3 {
+  background-image: url(../assets/clients/client3.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client4 {
+  background-image: url(../assets/clients/client4.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client5 {
+  background-image: url(../assets/clients/client5.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client6 {
+  background-image: url(../assets/clients/client6.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client7 {
+  background-image: url(../assets/clients/client7.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client8 {
+  background-image: url(../assets/clients/client8.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client9 {
+  background-image: url(../assets/clients/client9.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client10 {
+  background-image: url(../assets/clients/client10.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client11 {
+  background-image: url(../assets/clients/client11.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.client12 {
+  background-image: url(../assets/clients/client12.png);
+  width: 170px;
+  height: 70px;
+  margin: 0px 50px 0px 0px;
+}
+
+.gradient5 {
+  background-image: url(../assets/gradient5.png);
+  width: 3000px;
+  height: 600px;
+  position: absolute;
+  top: 4300px;
+  left: -850px;
+}
+
+.footer {
+  color: #FFFFFF;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+.footerTop p {
+  margin: 0 0 10px 0;
+}
+
+.footerLogo {
+  background-image: url(../assets/logo-reanimate-branco.png);
+  width: 208px;
+  height: 76px;
+  margin: 0px 0px 0px 0px;
+}
+
+.footerInput {
+  width: 557px;
+  height: 58px;
+  border-radius: 29px;
+  border: 1px solid #E8336A;
+  background-color:rgba(245, 245, 245, 0.5);
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+  margin: 0 0 15px 0;
+}
+
+.footerButton {
+  background-image: url(../assets/inscreverbutton.png);
+  width: 182px;
+  height: 42px;
+  margin: 0px 0px 0px 0px;
+}
+
+.footerLine {
+  width: 1280px;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin: 25px 0 25px 0;
+}
+
+.footerSocials {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  margin: 0 0 0 0;
+}
+
+.footerFace {
+  background-image: url(../assets/logo-facebook.png);
+  width: 46px;
+  height: 46px;
+  margin: 0px 0px 0px 0px;
+}
+
+.footerInsta {
+  background-image: url(../assets/logo-instagram.png);
+  width: 47px;
+  height: 47px;
+  margin: 0px 0px 0px 0px;
+}
+
+.footerLinkedin {
+  background-image: url(../assets/logo-linkedin.png);
+  width: 47px;
+  height: 47px;
+  margin: 0px 0px 0px 0px;
+}
+
+.footerLegal {
+  font-size: 14px;
+}
