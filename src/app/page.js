@@ -51,23 +51,85 @@ export default function Home() {
     swiperContainer.initialize();
     }, []);
 
+    function reanimLink () {
+      window.open('https://www.reanimate.com.br/', "_self");
+    }
+
+    const featuresRef = useRef(null);
+    const mmRef = useRef(null);
+    const raRef = useRef(null);
+    const daRef = useRef(null);
+    const pointRef = useRef(null);
+    const clientsRef = useRef(null);
+
+    const anchorFeatures = () => {
+        const featuresPosition = featuresRef.current.offsetTop -50;
+        window.scrollTo({
+          top: featuresPosition,
+          behavior: 'smooth',
+        })
+    }
+
+    const anchorMM = () => {
+      const mmPosition = mmRef.current.offsetTop -50;
+      window.scrollTo({
+        top: mmPosition,
+        behavior: 'smooth',
+      })
+    }
+
+    const anchorRA = () => {
+      const raPosition = raRef.current.offsetTop -50;
+      window.scrollTo({
+        top: raPosition,
+        behavior: 'smooth',
+      })
+    }
+
+    const anchorDA = () => {
+      const daPosition = daRef.current.offsetTop -50;
+      window.scrollTo({
+        top: daPosition,
+        behavior: 'smooth',
+      })
+    }
+
+    const anchorPoint = () => {
+      const pointPosition = pointRef.current.offsetTop -50;
+      window.scrollTo({
+        top: pointPosition,
+        behavior: 'smooth',
+      })
+    }
+
+    const anchorClients = () => {
+      const clientsPosition = clientsRef.current.offsetTop -50;
+      window.scrollTo({
+        top: clientsPosition,
+        behavior: 'smooth',
+      })
+    }
+
   return (
-    <div className={styles.page}>
+    <div>
       <div className={styles.gradient1} />
+
       <div className={styles.header}>
         <div className={styles.headerLogo} />
         <div className={styles.headerTopicsContainer}>
-          <p className={styles.headerTopic}>HOME</p>
-          <p className={styles.headerTopic}>SOBRE</p>
-          <p className={styles.headerTopic}>MASTER MOTION</p>
-          <p className={styles.headerTopic}>REPLICATE</p>
-          <p className={styles.headerTopic}>DYNAMIC</p>
-          <p className={styles.headerTopic}>CASES</p>
+          <p className={styles.headerTopic} onClick={anchorFeatures}>FEATURES</p>
+          <p className={styles.headerTopic} onClick={anchorMM}> MASTER MOTION</p>
+          <p className={styles.headerTopic} onClick={anchorRA}>REPLICATE</p>
+          <p className={styles.headerTopic} onClick={anchorDA}>DYNAMIC</p>
+          <p className={styles.headerTopic} onClick={anchorPoint}>POINT</p>
+          <p className={styles.headerTopic} onClick={anchorClients}>CLIENTES</p>
           <p className={styles.headerTopic}>CONTATO</p>
-          <div className={styles.headerLoginButton} />
+          <div className={styles.headerLoginButton} onClick={reanimLink} />
         </div>
       </div>
+
       <div className={styles.gradient2} />
+
       <div className={styles.main}>
         <div className={styles.mainFirstSection}>
           <div className={styles.mainLeft}>
@@ -78,8 +140,10 @@ export default function Home() {
             <div className={styles.mainAutomatizeArt} />
           </div>
         </div>
+
         <div className={styles.mainStars} />
-        <div className={styles.qualitiesContainer}>
+
+        <div className={styles.qualitiesContainer} ref={featuresRef} >
           <div>
             <div className={styles.iconCheck} />
             <h2>Mais qualidade</h2>
@@ -96,8 +160,10 @@ export default function Home() {
             <p>Tenha uma campanha inteira nas mãos em poucos cliques.</p>
           </div>
         </div>
+
         <div className={styles.gradient3} />
         <div className={styles.gradient4} />
+
         <div className={styles.modulesContainer}>
           <h1>Revolucione a sua operação!</h1>
           <p className={styles.modulesContainerText1}>O <b>re.animate</b> é dividido em três módulos:</p>
@@ -107,9 +173,10 @@ export default function Home() {
             <div className={styles.logoDA} />
           </div>
           <p className={styles.modulesContainerText2}>Três programas que vão trazer automação a sua linha de produção de banners.</p>
+
           <div className={styles.modulesDetails}>
             <div className={styles.modulesDetailsContainer}>
-              <div className={styles.pcMM} />
+              <div className={styles.pcMM} ref={mmRef} />
               <div className={styles.modulesDetailsContainerInfos}>
                 <div className={styles.logoMM} />
                 <p>Dê vida às suas criações de forma simples, e criativa, transformando elementos estáticos, em animações de alto nível. De maneira rápida, fácil e totalmente no code.</p>
@@ -122,10 +189,10 @@ export default function Home() {
                 <p>Otimize o processo de replicação para diversos formatos em apenas um clique, mantendo a qualidade visual. Mudou alguma informação? Altere rapidamente de modo automático toda sua linha criativa.</p>
                 <div className={styles.buttonRA} />
               </div>
-              <div className={styles.pcRA} />
+              <div className={styles.pcRA} ref={raRef}/>
             </div>
             <div className={styles.modulesDetailsContainer}>
-              <div className={styles.pcDA} />
+              <div className={styles.pcDA} ref={daRef} />
               <div className={styles.modulesDetailsContainerInfos}>
                 <div className={styles.logoDA} />
                 <p>Em casos onde existem muitos produtos e ofertas a serem publicados, crie um feed com inúmeras variações de conteúdos em um só lugar utilizando apenas o KV.</p>
@@ -133,10 +200,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={styles.aboutPoint} />
+          <div className={styles.aboutPoint} ref={pointRef} />
         </div>
+
         <div className={styles.carousel}>
-          <h1 className={styles.carouselTitle}>Nossos clientes:</h1>
+          <h1 className={styles.carouselTitle} ref={clientsRef}>Nossos clientes:</h1>
           <swiper-container ref={paginationRef} init="false">
             <SwiperSlide>
               <div style={{display: 'flex', margin: '0 0 0 300px'}}>
@@ -165,7 +233,9 @@ export default function Home() {
           </swiper-container>
         </div>
       </div>
+
       <div className={styles.gradient5} />
+
       <div className={styles.footer}>
         <div className={styles.footerTop}>
           <div className={styles.footerLogo} />
@@ -188,8 +258,9 @@ export default function Home() {
           <div className={styles.footerInsta} />
           <div className={styles.footerLinkedin} />
         </div>
-        <p className={styles.footerLegal}>©2024 PointMedia. All Rights Reserved</p>
+        <div className={styles.footerLegal}>©2024 PointMedia. All Rights Reserved</div>
       </div>
+      
     </div>
   );
 }
