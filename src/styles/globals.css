@@ -15,7 +15,6 @@ html {
   text-rendering: optimizeLegibility;
   background-color: #fff;
   color: #000;
-  overflow-x: hidden;
 }
 
 @font-face {
@@ -54,4 +53,14 @@ input:focus:not {
   box-shadow: none;
   border-bottom: none;
   outline: none;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:focus {
+  outline: none;
+  font-family: inherit;
 }
