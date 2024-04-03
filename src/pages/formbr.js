@@ -5,7 +5,7 @@ import Head from 'next/head'
 export default function formbr() {
 
     return (
-        <div className={styles.page}>
+        <div>
             <Head>
                 <title>Formulário | re.animate</title>
                 <meta name='description' content='Agende sua demo' />
@@ -18,7 +18,7 @@ export default function formbr() {
                     <div className={styles.containerClose} />
                 </Link>
                 <div className={styles.containerContent}>
-                    <div>
+                    <div className={styles.containerTexts}>
                         <div className={styles.containerTitle}>Agende sua demo</div>
                         <div className={styles.containerText}>Nos conte um pouco sobre você e como podemos te ajudar.</div>
                     </div>
