@@ -283,7 +283,7 @@
 }
 
 .modulesContainer {
-  width: 1440px;
+  width: 80vw;
   margin: 100px auto 0 auto;
   background-color:rgba(245, 245, 245, 0.5);
   border-radius: 49px;
@@ -763,6 +763,7 @@
 
   .modulesContainer {
     margin: 0 auto;
+    width: 100vw;
   }
   
   .carousel {
@@ -910,6 +911,11 @@
     margin-bottom: -250px;
   }
 
+  .modulesContainer {
+    margin: 0 auto;
+    width: 113vw;
+  }
+
   .carousel {
     transform: scale(0.8);
     margin-bottom: 130px;
@@ -994,6 +1000,11 @@
     transform: translateX(-62.5%) scale(0.65);
     margin-top: -370px;
     margin-bottom: -250px;
+  }
+
+  .modulesContainer {
+    margin: 0 auto;
+    width: 140vw;
   }
 
   .aboutPoint {
@@ -1093,8 +1104,13 @@
 
   .modulesContainerExternal {
     transform: translateX(-71.5%) scale(0.5);
-    margin-top: -550px;
+    margin-top: -580px;
     margin-bottom: -250px;
+  }
+
+  .modulesContainer {
+    margin: 0 auto;
+    width: 188vw;
   }
 
   .carousel {
@@ -1115,7 +1131,7 @@
 
   .footerTop {
     width: 123vw;
-    margin-top: 65px;
+    margin-top: 100px;
     margin-left: 30px;
     transform: scale(0.7);
   }
@@ -1191,6 +1207,11 @@
     transform: translateX(-76%) scale(0.42);
     margin-top: -850px;
     margin-bottom: -250px;
+  }
+
+  .modulesContainer {
+    margin: 0 auto;
+    width: 225vw;
   }
 
   .modulesContainer h1 {
@@ -1350,6 +1371,11 @@
     transform: translateX(-82%) scale(0.32);
     margin-top: -1200px;
     margin-bottom: -250px;
+  }
+
+  .modulesContainer {
+    margin: 0 auto;
+    width: 300vw;
   }
 
   .modulesContainer h1 {
@@ -1533,6 +1559,11 @@
     transform: translateX(-87%) scale(0.21);
     margin-top: -1900px;
     margin-bottom: -250px;
+  }
+
+  .modulesContainer {
+    margin: 0 auto;
+    width: 450vw;
   }
 
   .modulesContainer h1 {
