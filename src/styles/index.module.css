@@ -1861,6 +1861,28 @@
 
 }
 
+@media (max-width: 415px) {
+
+  .header {
+    width: 90vw;
+  }
+
+  .modulesContainer h1 {
+    transform: scale(1.9);
+  }
+
+  .modulesDetails {
+    width: 100%;
+    transform: scale(1.1);
+    margin: 100px 0 230px 0;
+  }
+
+  .footerInput {
+    width: 490px;
+  }
+
+}
+
 @media (max-width: 370px) {
 
   .gradient3 {
