@@ -1551,6 +1551,11 @@
     transform: scale(0.9);
   }
 
+  .footerLogo {
+    width: 500px;
+    height: 182px;
+  }
+
 }
 
 @media (max-width: 1024px) {
