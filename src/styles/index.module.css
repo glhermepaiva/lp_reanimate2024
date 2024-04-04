@@ -42,6 +42,8 @@
   background-image: url(../assets/logo-reanimate.png);
   width: 240px;
   height: 87px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .headerHamburger {
@@ -50,6 +52,8 @@
   height: 97px;
   display: none;
   cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .hoverMenu {
@@ -81,10 +85,14 @@
   cursor: pointer;
   margin: 50px 30px 30px 0;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .menuClose:hover {
   background-image: url(../assets/x-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .menuLinks {
@@ -109,10 +117,14 @@
   cursor: pointer;
   transition: 0.5s;
   margin: 50px 0 50px 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .menuLoginButton:hover {
   background-image: url(../assets/loginbutton-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .menuSocials {
@@ -145,10 +157,14 @@
   height: 42px;
   cursor: pointer;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .headerLoginButton:hover {
   background-image: url(../assets/loginbutton-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .mainFirstSection {
@@ -185,10 +201,14 @@
   cursor: pointer;
   transition: 0.5s;
   z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .mainContrateButton:hover {
   background-image: url(../assets/contratebutton-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .mainRight {
@@ -210,6 +230,8 @@
   height: 30px;
   margin: 100px auto 0 auto;
   z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .qualitiesContainer {
@@ -247,6 +269,8 @@
   width: 98px;
   height: 89px;
   margin: 0 auto 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .iconProject {
@@ -254,6 +278,8 @@
   width: 87px;
   height: 89px;
   margin: 0 auto 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .iconClock {
@@ -261,6 +287,8 @@
   width: 83px;
   height: 84px;
   margin: 0 auto 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .gradient3 {
@@ -377,18 +405,24 @@
   background-image: url(../assets/pc-mm.png);
   width: 658px;
   height: 442px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .pcRA {
   background-image: url(../assets/pc-ra.png);
   width: 658px;
   height: 442px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .pcDA {
   background-image: url(../assets/pc-da.png);
   width: 658px;
   height: 442px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .buttonMM {
@@ -397,10 +431,14 @@
   height: 76px;
   cursor: pointer;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .buttonMM:hover {
   background-image: url(../assets/button-mm-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .buttonRA {
@@ -409,10 +447,14 @@
   height: 76px;
   cursor: pointer;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .buttonRA:hover {
   background-image: url(../assets/button-ra-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .buttonDA {
@@ -420,11 +462,15 @@
   width: 375px;
   height: 76px;
   cursor: pointer;
-  transition: 0.5s
+  transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .buttonDA:hover {
   background-image: url(../assets/button-da-white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .aboutPoint {
@@ -434,6 +480,8 @@
   margin: 100px 0 -225px 0;
   cursor: pointer;
   transition: 1.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .aboutPoint:hover {
@@ -441,14 +489,7 @@
 }
 
 .carousel {
-  margin: 250px auto 250px auto;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  overflow-x: hidden;
+  margin: 200px 0 100px 0;
 }
 
 .carouselTitle {
@@ -456,120 +497,610 @@
   color: #E8336A;
   font-size: 48px;
   font-family: FiraSans;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
-.carouselClients {
+.clientsGallery {
   display: flex;
-  margin: 0 auto 0 auto;
-  width: 50vw;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 30px auto 20px auto;
+  height: 450px;
+}
+
+.clientsSwipe {
+  margin: 0 0 0 50px;
 }
 
 .client1 {
   background-image: url(../assets/clients/client1.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client2 {
   background-image: url(../assets/clients/client2.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client3 {
   background-image: url(../assets/clients/client3.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client4 {
   background-image: url(../assets/clients/client4.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client5 {
   background-image: url(../assets/clients/client5.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client6 {
   background-image: url(../assets/clients/client6.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client7 {
   background-image: url(../assets/clients/client7.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client8 {
   background-image: url(../assets/clients/client8.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client9 {
   background-image: url(../assets/clients/client9.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client10 {
   background-image: url(../assets/clients/client10.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client11 {
   background-image: url(../assets/clients/client11.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .client12 {
   background-image: url(../assets/clients/client12.png);
-  width: 170px;
-  height: 70px;
-  margin: 0px 50px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client13 {
+  background-image: url(../assets/clients/client13.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client14 {
+  background-image: url(../assets/clients/client14.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client15 {
+  background-image: url(../assets/clients/client15.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client16 {
+  background-image: url(../assets/clients/client16.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client17 {
+  background-image: url(../assets/clients/client17.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client18 {
+  background-image: url(../assets/clients/client18.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client19 {
+  background-image: url(../assets/clients/client19.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client20 {
+  background-image: url(../assets/clients/client20.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client21 {
+  background-image: url(../assets/clients/client21.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client22 {
+  background-image: url(../assets/clients/client22.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client23 {
+  background-image: url(../assets/clients/client23.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client24 {
+  background-image: url(../assets/clients/client24.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client25 {
+  background-image: url(../assets/clients/client25.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client26 {
+  background-image: url(../assets/clients/client26.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client27 {
+  background-image: url(../assets/clients/client27.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client28 {
+  background-image: url(../assets/clients/client28.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client29 {
+  background-image: url(../assets/clients/client29.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client30 {
+  background-image: url(../assets/clients/client30.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client31 {
+  background-image: url(../assets/clients/client31.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client32 {
+  background-image: url(../assets/clients/client32.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client33 {
+  background-image: url(../assets/clients/client33.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client34 {
+  background-image: url(../assets/clients/client34.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client35 {
+  background-image: url(../assets/clients/client35.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client36 {
+  background-image: url(../assets/clients/client36.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client37 {
+  background-image: url(../assets/clients/client37.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client38 {
+  background-image: url(../assets/clients/client38.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client39 {
+  background-image: url(../assets/clients/client39.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client40 {
+  background-image: url(../assets/clients/client40.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client41 {
+  background-image: url(../assets/clients/client41.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client42 {
+  background-image: url(../assets/clients/client42.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client43 {
+  background-image: url(../assets/clients/client43.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client44 {
+  background-image: url(../assets/clients/client44.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client45 {
+  background-image: url(../assets/clients/client45.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client46 {
+  background-image: url(../assets/clients/client46.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client47 {
+  background-image: url(../assets/clients/client47.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client48 {
+  background-image: url(../assets/clients/client48.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client49 {
+  background-image: url(../assets/clients/client49.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client50 {
+  background-image: url(../assets/clients/client50.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client51 {
+  background-image: url(../assets/clients/client51.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client52 {
+  background-image: url(../assets/clients/client52.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client53 {
+  background-image: url(../assets/clients/client53.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client54 {
+  background-image: url(../assets/clients/client54.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client55 {
+  background-image: url(../assets/clients/client55.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client56 {
+  background-image: url(../assets/clients/client56.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client57 {
+  background-image: url(../assets/clients/client57.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client58 {
+  background-image: url(../assets/clients/client58.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client59 {
+  background-image: url(../assets/clients/client59.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client60 {
+  background-image: url(../assets/clients/client60.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client61 {
+  background-image: url(../assets/clients/client61.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client62 {
+  background-image: url(../assets/clients/client62.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client63 {
+  background-image: url(../assets/clients/client63.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client64 {
+  background-image: url(../assets/clients/client64.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client65 {
+  background-image: url(../assets/clients/client65.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client66 {
+  background-image: url(../assets/clients/client66.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client67 {
+  background-image: url(../assets/clients/client67.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client68 {
+  background-image: url(../assets/clients/client68.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client69 {
+  background-image: url(../assets/clients/client69.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client70 {
+  background-image: url(../assets/clients/client70.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client71 {
+  background-image: url(../assets/clients/client71.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client72 {
+  background-image: url(../assets/clients/client72.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client73 {
+  background-image: url(../assets/clients/client73.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client74 {
+  background-image: url(../assets/clients/client74.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client75 {
+  background-image: url(../assets/clients/client75.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client76 {
+  background-image: url(../assets/clients/client76.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client77 {
+  background-image: url(../assets/clients/client77.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client78 {
+  background-image: url(../assets/clients/client78.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client79 {
+  background-image: url(../assets/clients/client79.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client80 {
+  background-image: url(../assets/clients/client80.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client81 {
+  background-image: url(../assets/clients/client81.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client82 {
+  background-image: url(../assets/clients/client82.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client83 {
+  background-image: url(../assets/clients/client83.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
+}
+
+.client84 {
+  background-image: url(../assets/clients/client84.png);
+  width: 205px;
+  height: 90px;
+  margin: 0 0 20px 0;
 }
 
 .footer {
@@ -592,6 +1123,8 @@
   left: 50%;
   transform: translate(-50%);
   z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footerTop {
@@ -624,6 +1157,8 @@
   height: 76px;
   margin: 0px 0px 0px 0px;
   cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footerInput {
@@ -646,10 +1181,14 @@
   margin: 0px 0px 0px 0px;
   cursor: pointer;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footerButton:hover {
   background-image: url(../assets/inscreverbutton-pink.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footerBottom {
@@ -680,10 +1219,15 @@
   margin: 0px 0px 0px 0px;
   cursor: pointer;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
+
 }
 
 .footerFace:hover {
   background-image: url(../assets/logo-facebook-pink.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footerInsta {
@@ -693,10 +1237,14 @@
   margin: 0px 0px 0px 0px;
   cursor: pointer;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footerInsta:hover {
   background-image: url(../assets/logo-instagram-pink.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
@@ -707,10 +1255,14 @@
   margin: 0px 0px 0px 0px;
   cursor: pointer;
   transition: 0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footerLinkedin:hover {
   background-image: url(../assets/logo-linkedin-pink.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
@@ -777,7 +1329,7 @@
   }
   
   .carousel {
-    margin-bottom: 250px;
+    margin-bottom: 150px;
   }
 
   .footerTop {
@@ -831,7 +1383,8 @@
   }
 
   .carousel {
-    margin-bottom: 250px;
+    margin-top: 300px;
+    margin-bottom: 150px;
   }
 
   .carouselClients {
@@ -902,7 +1455,7 @@
 
   .carousel {
     transform: scale(1);
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     margin-top: 200px;
   }
 
@@ -982,7 +1535,7 @@
 
   .carousel {
     transform: scale(1);
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     margin-top: 200px;
   }
 
@@ -1083,8 +1636,8 @@
 
   .carousel {
     transform: scale(1);
-    margin-bottom: 250px;
-    margin-top: 10px;
+    margin-bottom: 150px;
+    margin-top: 50px;
   }
 
   .carouselClients {
@@ -1180,7 +1733,7 @@
 
   .carousel {
     transform: scale(1);
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     margin-top: 10px;
   }
 
@@ -1277,7 +1830,7 @@
 
   .carousel {
     transform: scale(1);
-    margin: -200px auto 200px auto;
+    margin: -200px auto 150px auto;
     width: 100vw;
   }
 
@@ -1339,7 +1892,7 @@
 
   .carousel {
     transform: scale(0.8);
-    margin: -220px auto 150px auto;
+    margin: -250px auto 100px auto;
     width: 100vw;
   }
 
@@ -1480,7 +2033,7 @@
 
   .carousel {
     transform: scale(0.9);
-    margin: -550px auto 0px auto;
+    margin: -550px auto -50px auto;
     width: 100vw;
   }
 
@@ -1564,7 +2117,7 @@
 
   .carousel {
     transform: scale(0.9);
-    margin: -500px auto 0px auto;
+    margin: -500px auto -50px auto;
     width: 100vw;
   }
 
@@ -1628,7 +2181,7 @@
 
   .carousel {
     transform: scale(0.85);
-    margin: -500px auto 0px auto;
+    margin: -500px auto -100px auto;
     width: 100vw;
   }
 
@@ -1753,7 +2306,7 @@
 
   .carousel {
     transform: scale(0.8);
-    margin: -1000px auto -40px auto;
+    margin: -1000px auto -150px auto;
     width: 100vw;
   }
 
@@ -1844,7 +2397,7 @@
 
   .carousel {
     transform: scale(0.9);
-    margin: -850px auto -20px auto;
+    margin: -850px auto -120px auto;
     width: 100vw;
   }
 
@@ -1863,6 +2416,12 @@
 
 @media (max-width: 415px) {
 
+  .gradient4 {
+    top: 1700px;
+    right: -375px;
+    transform: scale(0.5);
+  }
+
   .header {
     width: 90vw;
   }
@@ -1875,6 +2434,10 @@
     width: 100%;
     transform: scale(1.1);
     margin: 100px 0 230px 0;
+  }
+
+  .carousel {
+    margin: -850px auto -120px auto;
   }
 
   .footerInput {
@@ -1992,8 +2555,12 @@
 
   .carousel {
     transform: scale(0.9);
-    margin: -1900px auto -28px auto;
+    margin: -1900px auto -100px auto;
     width: 100vw;
+  }
+
+  .carouselTitle {
+    font-size: 40px;
   }
 
   .carouselClients {
@@ -2128,13 +2695,8 @@
 
   .carousel {
     transform: scale(0.9);
-    margin: -2200px auto 0px auto;
+    margin: -2200px auto -50px auto;
     width: 100vw;
-  }
-
-  .carouselTitle {
-    width: 300px;
-    font-size: 40px;
   }
 
   .carouselClients {

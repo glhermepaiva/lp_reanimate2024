@@ -3,7 +3,8 @@ import styles from "../styles/index.module.css";
 import Link from 'next/link'
 import Head from 'next/head'
 
-import {SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
@@ -13,6 +14,45 @@ import { register } from "swiper/element/bundle";
 register();
 
 export default function Home() {
+
+  /***** WINDOW SIZE  *****/
+
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+
+  }, [])
+
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+
+    useEffect(() => {
+        function handleResize() {
+
+          setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+          });
+        }
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return windowSize;
+  }
+
+  const size = useWindowSize();
 
   /***** HAMBURGER MENU  *****/
 
@@ -29,39 +69,6 @@ export default function Home() {
   const closeMenu = () => {
     setMenuOpen(false)
   }
-
-  /***** CAROUSEL CONFIG *****/
-
-  const paginationRef = useRef(null);
-
-    useEffect(() => {
-    const swiperContainer = paginationRef.current;
-    const params = {
-        pagination: {
-        clickable: true
-        },
-        loop: true,
-        injectStyles: [
-        `
-            .swiper-wrapper {
-                width: 100vw;
-                height: 150px;
-                margin: 0px 0 20px 0;
-            }
-
-            .swiper-pagination-bullet {
-                width: 27px;
-                height: 27px;
-                margin: 0px 10px !important;
-                background-color: #E8336A;
-            }
-        `,
-        ],
-    };
-
-    Object.assign(swiperContainer, params);
-    swiperContainer.initialize();
-    }, []);
 
     /***** EXTERNAL LINKS *****/
 
@@ -340,33 +347,656 @@ export default function Home() {
         </div>
 
         <div className={styles.carousel}>
-          <h1 className={styles.carouselTitle} ref={clientsRef}>Nossos clientes:</h1>
-          <swiper-container ref={paginationRef} init="false">
-            <SwiperSlide>
-              <div className={styles.carouselClients}>
-                <div className={styles.client1} />
-                <div className={styles.client2} />
-                <div className={styles.client3} />
-                <div className={styles.client4} />
-              </div>
+          <div className={styles.carouselTitle} ref={clientsRef}>Nossos clientes:</div>
+          {size.width >= 2400 ? 
+          <Swiper slidesPerView={8.5} spaceBetween={10} freeMode={true} modules={[FreeMode]} className={styles.clientsGallery}>
+            <SwiperSlide className={styles.clientsSwipe}>
+              <div className={styles.client1} />
+              <div className={styles.client2} />
+              <div className={styles.client3} />
+              <div className={styles.client4} />
             </SwiperSlide>
             <SwiperSlide>
-            <div className={styles.carouselClients}>
-                <div className={styles.client5} />
-                <div className={styles.client6} />
-                <div className={styles.client7} />
-                <div className={styles.client8} />
-              </div>
+              <div className={styles.client5} />
+              <div className={styles.client6} />
+              <div className={styles.client7} />
+              <div className={styles.client8} />
             </SwiperSlide>
             <SwiperSlide>
-            <div className={styles.carouselClients}>
-                <div className={styles.client9} />
-                <div className={styles.client10} />
-                <div className={styles.client11} />
-                <div className={styles.client12} />
-              </div>
+              <div className={styles.client9} />
+              <div className={styles.client10} />
+              <div className={styles.client11} />
+              <div className={styles.client12} />
             </SwiperSlide>
-          </swiper-container>
+            <SwiperSlide>
+              <div className={styles.client13} />
+              <div className={styles.client14} />
+              <div className={styles.client15} />
+              <div className={styles.client16} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client17} />
+              <div className={styles.client18} />
+              <div className={styles.client19} />
+              <div className={styles.client20} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client21} />
+              <div className={styles.client22} />
+              <div className={styles.client23} />
+              <div className={styles.client24} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client25} />
+              <div className={styles.client26} />
+              <div className={styles.client27} />
+              <div className={styles.client28} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client29} />
+              <div className={styles.client30} />
+              <div className={styles.client31} />
+              <div className={styles.client32} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client33} />
+              <div className={styles.client34} />
+              <div className={styles.client35} />
+              <div className={styles.client36} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client37} />
+              <div className={styles.client38} />
+              <div className={styles.client39} />
+              <div className={styles.client40} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client41} />
+              <div className={styles.client42} />
+              <div className={styles.client43} />
+              <div className={styles.client44} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client45} />
+              <div className={styles.client46} />
+              <div className={styles.client47} />
+              <div className={styles.client48} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client49} />
+              <div className={styles.client50} />
+              <div className={styles.client51} />
+              <div className={styles.client52} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client53} />
+              <div className={styles.client54} />
+              <div className={styles.client55} />
+              <div className={styles.client56} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client57} />
+              <div className={styles.client58} />
+              <div className={styles.client59} />
+              <div className={styles.client60} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client61} />
+              <div className={styles.client62} />
+              <div className={styles.client63} />
+              <div className={styles.client64} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client65} />
+              <div className={styles.client66} />
+              <div className={styles.client67} />
+              <div className={styles.client68} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client69} />
+              <div className={styles.client70} />
+              <div className={styles.client71} />
+              <div className={styles.client72} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client73} />
+              <div className={styles.client74} />
+              <div className={styles.client75} />
+              <div className={styles.client76} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client77} />
+              <div className={styles.client78} />
+              <div className={styles.client79} />
+              <div className={styles.client80} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client81} />
+              <div className={styles.client82} />
+              <div className={styles.client83} />
+              <div className={styles.client84} />
+            </SwiperSlide>
+          </Swiper>
+          :
+          size.width >= 1600 ?
+        <Swiper slidesPerView={6.5} spaceBetween={10} freeMode={true} modules={[FreeMode]} className={styles.clientsGallery}>
+          <SwiperSlide className={styles.clientsSwipe}>
+              <div className={styles.client1} />
+              <div className={styles.client2} />
+              <div className={styles.client3} />
+              <div className={styles.client4} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client5} />
+              <div className={styles.client6} />
+              <div className={styles.client7} />
+              <div className={styles.client8} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client9} />
+              <div className={styles.client10} />
+              <div className={styles.client11} />
+              <div className={styles.client12} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client13} />
+              <div className={styles.client14} />
+              <div className={styles.client15} />
+              <div className={styles.client16} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client17} />
+              <div className={styles.client18} />
+              <div className={styles.client19} />
+              <div className={styles.client20} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client21} />
+              <div className={styles.client22} />
+              <div className={styles.client23} />
+              <div className={styles.client24} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client25} />
+              <div className={styles.client26} />
+              <div className={styles.client27} />
+              <div className={styles.client28} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client29} />
+              <div className={styles.client30} />
+              <div className={styles.client31} />
+              <div className={styles.client32} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client33} />
+              <div className={styles.client34} />
+              <div className={styles.client35} />
+              <div className={styles.client36} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client37} />
+              <div className={styles.client38} />
+              <div className={styles.client39} />
+              <div className={styles.client40} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client41} />
+              <div className={styles.client42} />
+              <div className={styles.client43} />
+              <div className={styles.client44} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client45} />
+              <div className={styles.client46} />
+              <div className={styles.client47} />
+              <div className={styles.client48} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client49} />
+              <div className={styles.client50} />
+              <div className={styles.client51} />
+              <div className={styles.client52} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client53} />
+              <div className={styles.client54} />
+              <div className={styles.client55} />
+              <div className={styles.client56} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client57} />
+              <div className={styles.client58} />
+              <div className={styles.client59} />
+              <div className={styles.client60} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client61} />
+              <div className={styles.client62} />
+              <div className={styles.client63} />
+              <div className={styles.client64} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client65} />
+              <div className={styles.client66} />
+              <div className={styles.client67} />
+              <div className={styles.client68} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client69} />
+              <div className={styles.client70} />
+              <div className={styles.client71} />
+              <div className={styles.client72} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client73} />
+              <div className={styles.client74} />
+              <div className={styles.client75} />
+              <div className={styles.client76} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client77} />
+              <div className={styles.client78} />
+              <div className={styles.client79} />
+              <div className={styles.client80} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client81} />
+              <div className={styles.client82} />
+              <div className={styles.client83} />
+              <div className={styles.client84} />
+            </SwiperSlide>
+          </Swiper>
+          :
+          size.width >= 1280 ? 
+          <Swiper slidesPerView={4.5} spaceBetween={10} freeMode={true} modules={[FreeMode]} className={styles.clientsGallery}>
+            <SwiperSlide>
+              <div className={styles.client1} />
+              <div className={styles.client2} />
+              <div className={styles.client3} />
+              <div className={styles.client4} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client5} />
+              <div className={styles.client6} />
+              <div className={styles.client7} />
+              <div className={styles.client8} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client9} />
+              <div className={styles.client10} />
+              <div className={styles.client11} />
+              <div className={styles.client12} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client13} />
+              <div className={styles.client14} />
+              <div className={styles.client15} />
+              <div className={styles.client16} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client17} />
+              <div className={styles.client18} />
+              <div className={styles.client19} />
+              <div className={styles.client20} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client21} />
+              <div className={styles.client22} />
+              <div className={styles.client23} />
+              <div className={styles.client24} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client25} />
+              <div className={styles.client26} />
+              <div className={styles.client27} />
+              <div className={styles.client28} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client29} />
+              <div className={styles.client30} />
+              <div className={styles.client31} />
+              <div className={styles.client32} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client33} />
+              <div className={styles.client34} />
+              <div className={styles.client35} />
+              <div className={styles.client36} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client37} />
+              <div className={styles.client38} />
+              <div className={styles.client39} />
+              <div className={styles.client40} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client41} />
+              <div className={styles.client42} />
+              <div className={styles.client43} />
+              <div className={styles.client44} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client45} />
+              <div className={styles.client46} />
+              <div className={styles.client47} />
+              <div className={styles.client48} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client49} />
+              <div className={styles.client50} />
+              <div className={styles.client51} />
+              <div className={styles.client52} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client53} />
+              <div className={styles.client54} />
+              <div className={styles.client55} />
+              <div className={styles.client56} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client57} />
+              <div className={styles.client58} />
+              <div className={styles.client59} />
+              <div className={styles.client60} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client61} />
+              <div className={styles.client62} />
+              <div className={styles.client63} />
+              <div className={styles.client64} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client65} />
+              <div className={styles.client66} />
+              <div className={styles.client67} />
+              <div className={styles.client68} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client69} />
+              <div className={styles.client70} />
+              <div className={styles.client71} />
+              <div className={styles.client72} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client73} />
+              <div className={styles.client74} />
+              <div className={styles.client75} />
+              <div className={styles.client76} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client77} />
+              <div className={styles.client78} />
+              <div className={styles.client79} />
+              <div className={styles.client80} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client81} />
+              <div className={styles.client82} />
+              <div className={styles.client83} />
+              <div className={styles.client84} />
+            </SwiperSlide>
+          </Swiper>
+          :
+          size.width >= 768 ? 
+          <Swiper slidesPerView={3.5} spaceBetween={10} freeMode={true} modules={[FreeMode]} className={styles.clientsGallery}>
+            <SwiperSlide>
+              <div className={styles.client1} />
+              <div className={styles.client2} />
+              <div className={styles.client3} />
+              <div className={styles.client4} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client5} />
+              <div className={styles.client6} />
+              <div className={styles.client7} />
+              <div className={styles.client8} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client9} />
+              <div className={styles.client10} />
+              <div className={styles.client11} />
+              <div className={styles.client12} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client13} />
+              <div className={styles.client14} />
+              <div className={styles.client15} />
+              <div className={styles.client16} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client17} />
+              <div className={styles.client18} />
+              <div className={styles.client19} />
+              <div className={styles.client20} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client21} />
+              <div className={styles.client22} />
+              <div className={styles.client23} />
+              <div className={styles.client24} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client25} />
+              <div className={styles.client26} />
+              <div className={styles.client27} />
+              <div className={styles.client28} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client29} />
+              <div className={styles.client30} />
+              <div className={styles.client31} />
+              <div className={styles.client32} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client33} />
+              <div className={styles.client34} />
+              <div className={styles.client35} />
+              <div className={styles.client36} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client37} />
+              <div className={styles.client38} />
+              <div className={styles.client39} />
+              <div className={styles.client40} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client41} />
+              <div className={styles.client42} />
+              <div className={styles.client43} />
+              <div className={styles.client44} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client45} />
+              <div className={styles.client46} />
+              <div className={styles.client47} />
+              <div className={styles.client48} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client49} />
+              <div className={styles.client50} />
+              <div className={styles.client51} />
+              <div className={styles.client52} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client53} />
+              <div className={styles.client54} />
+              <div className={styles.client55} />
+              <div className={styles.client56} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client57} />
+              <div className={styles.client58} />
+              <div className={styles.client59} />
+              <div className={styles.client60} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client61} />
+              <div className={styles.client62} />
+              <div className={styles.client63} />
+              <div className={styles.client64} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client65} />
+              <div className={styles.client66} />
+              <div className={styles.client67} />
+              <div className={styles.client68} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client69} />
+              <div className={styles.client70} />
+              <div className={styles.client71} />
+              <div className={styles.client72} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client73} />
+              <div className={styles.client74} />
+              <div className={styles.client75} />
+              <div className={styles.client76} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client77} />
+              <div className={styles.client78} />
+              <div className={styles.client79} />
+              <div className={styles.client80} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client81} />
+              <div className={styles.client82} />
+              <div className={styles.client83} />
+              <div className={styles.client84} />
+            </SwiperSlide>
+          </Swiper>
+          :
+          <Swiper slidesPerView={1.7} spaceBetween={10} freeMode={true} modules={[FreeMode]} className={styles.clientsGallery}>
+            <SwiperSlide>
+              <div className={styles.client1} />
+              <div className={styles.client2} />
+              <div className={styles.client3} />
+              <div className={styles.client4} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client5} />
+              <div className={styles.client6} />
+              <div className={styles.client7} />
+              <div className={styles.client8} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client9} />
+              <div className={styles.client10} />
+              <div className={styles.client11} />
+              <div className={styles.client12} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client13} />
+              <div className={styles.client14} />
+              <div className={styles.client15} />
+              <div className={styles.client16} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client17} />
+              <div className={styles.client18} />
+              <div className={styles.client19} />
+              <div className={styles.client20} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client21} />
+              <div className={styles.client22} />
+              <div className={styles.client23} />
+              <div className={styles.client24} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client25} />
+              <div className={styles.client26} />
+              <div className={styles.client27} />
+              <div className={styles.client28} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client29} />
+              <div className={styles.client30} />
+              <div className={styles.client31} />
+              <div className={styles.client32} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client33} />
+              <div className={styles.client34} />
+              <div className={styles.client35} />
+              <div className={styles.client36} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client37} />
+              <div className={styles.client38} />
+              <div className={styles.client39} />
+              <div className={styles.client40} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client41} />
+              <div className={styles.client42} />
+              <div className={styles.client43} />
+              <div className={styles.client44} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client45} />
+              <div className={styles.client46} />
+              <div className={styles.client47} />
+              <div className={styles.client48} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client49} />
+              <div className={styles.client50} />
+              <div className={styles.client51} />
+              <div className={styles.client52} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client53} />
+              <div className={styles.client54} />
+              <div className={styles.client55} />
+              <div className={styles.client56} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client57} />
+              <div className={styles.client58} />
+              <div className={styles.client59} />
+              <div className={styles.client60} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client61} />
+              <div className={styles.client62} />
+              <div className={styles.client63} />
+              <div className={styles.client64} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client65} />
+              <div className={styles.client66} />
+              <div className={styles.client67} />
+              <div className={styles.client68} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client69} />
+              <div className={styles.client70} />
+              <div className={styles.client71} />
+              <div className={styles.client72} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client73} />
+              <div className={styles.client74} />
+              <div className={styles.client75} />
+              <div className={styles.client76} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client77} />
+              <div className={styles.client78} />
+              <div className={styles.client79} />
+              <div className={styles.client80} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.client81} />
+              <div className={styles.client82} />
+              <div className={styles.client83} />
+              <div className={styles.client84} />
+            </SwiperSlide>
+          </Swiper>
+          }
         </div>
 
         <div className={styles.footer}>
