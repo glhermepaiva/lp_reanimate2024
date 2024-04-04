@@ -19,10 +19,13 @@
 }
 
 .main {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .header {
@@ -310,8 +313,8 @@
 
 .logosContainer {
   display: flex;
-  justify-content: space-between;
-  width: 1235px;
+  justify-content: center;
+  width: 100%;
   margin: 30px 0 30px 0;
 }
 
@@ -319,18 +322,25 @@
   background-image: url(../assets/logo_mm.png);
   width: 422px;
   height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .logoRA {
   background-image: url(../assets/logo_ra.png);
   width: 381px;
   height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 2vw;
 }
 
 .logoDA {
   background-image: url(../assets/logo_da.png);
   width: 372px;
   height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .modulesContainerText2 {
@@ -432,7 +442,7 @@
 
 .carousel {
   margin: 250px auto 250px auto;
-  width: 1440px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -450,7 +460,8 @@
 
 .carouselClients {
   display: flex;
-  margin: 0 0 0 300px;
+  margin: 0 auto 0 auto;
+  width: 50vw;
 }
 
 .client1 {
@@ -458,6 +469,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client2 {
@@ -465,6 +478,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client3 {
@@ -472,6 +487,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client4 {
@@ -479,6 +496,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client5 {
@@ -486,6 +505,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client6 {
@@ -493,6 +514,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client7 {
@@ -500,6 +523,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client8 {
@@ -507,6 +532,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client9 {
@@ -514,6 +541,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client10 {
@@ -521,6 +550,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client11 {
@@ -528,6 +559,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .client12 {
@@ -535,15 +568,8 @@
   width: 170px;
   height: 70px;
   margin: 0px 50px 0px 0px;
-}
-
-.gradient5 {
-  background-image: url(../assets/gradient5.png);
-  width: 1920px;
-  height: 600px;
-  position: absolute;
-  top: 4250px;
-  right: 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footer {
@@ -553,14 +579,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
   font-family: FiraSans;
+  margin: 0 0 20px 0;
+}
+
+.gradient5 {
+  background-image: url(../assets/gradient5.png);
+  width: 2560px;
+  height: 600px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 0;
 }
 
 .footerTop {
   display: flex;
   justify-content: space-between;
-  width: 57vw;
+  width: 60vw;
+  z-index: 1;
 }
 
 .footerTop p {
@@ -612,6 +650,13 @@
 
 .footerButton:hover {
   background-image: url(../assets/inscreverbutton-pink.png);
+}
+
+.footerBottom {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footerLine {
@@ -677,27 +722,6 @@
 
 @media (max-width: 1680px) {
 
-  .gradient2 {
-    top: 100px;
-    right: 0px;
-    z-index: 0;
-  }
-
-  .gradient3 {
-    top: 1100px;
-    left: -880px;
-  }
-
-  .gradient4 {
-    top: 2200px;
-    right: 0px;
-  }
-
-  .gradient5 {
-    top: 4255px;
-    right: 0;
-  }
-
   .header {
     width: 84vw;
   }
@@ -714,29 +738,15 @@
 
 @media (max-width: 1500px) {
 
-  .gradient2 {
-    top: 100px;
-    right: -1px;
-  }
-
   .gradient3 {
     top: 900px;
     left: -1020px;
   }
 
   .gradient4 {
-    top: 1900px;
+    top: 2000px;
     right: -76px;
     transform: scale(0.9);
-  }
-
-  .gradient5 {
-    top: 3950px;
-    background-image: url(../assets/gradient5-2.png);
-    width: 1366px;
-    height: 550px;
-    left: 5px;
-    transform: scale(1.19);
   }
 
   .header {
@@ -748,7 +758,7 @@
   }
 
   .mainAutomatizeArt {
-    margin: 70px 0 0 0px;
+    margin: 70px 20px 0 0px;
     position: absolute;
     right: 40px;
   }
@@ -767,7 +777,6 @@
   }
   
   .carousel {
-    transform: scale(0.9);
     margin-bottom: 250px;
   }
 
@@ -784,33 +793,19 @@
 
 @media (max-width: 1366px) {
 
-  .gradient2 {
-    top: 100px;
-    right: -7px;
-  }
-
   .gradient3 {
     top: 900px;
     left: -1100px;
   }
 
   .gradient4 {
-    top: 1900px;
+    top: 1850px;
     right: -82px;
     transform: scale(0.9);
   }
 
-  .gradient5 {
-    background-image: url(../assets/gradient5-2.png);
-    width: 1366px;
-    height: 550px;
-    top: 3760px;
-    left: 0px;
-    transform: scale(1.01);
-  }
-
   .header {
-    width: 91vw;
+    width: 90vw;
   }
 
   .headerTopic {
@@ -825,36 +820,34 @@
     right: 10px;
   }
 
+  .qualitiesContainer {
+    transform: scale(0.95);
+  }
+
   .modulesContainerExternal {
-    transform: translateX(-51.7%) scale(0.85);
+    transform: translateX(-50%) scale(0.85);
     margin-top: -120px;
     margin-bottom: -250px;
   }
 
   .carousel {
-    transform: scale(0.9);
-    margin-bottom: 190px;
-    margin-left: -20px;
+    margin-bottom: 250px;
   }
 
   .carouselClients {
-    display: flex;
-    margin: 0 0 0 200px;
+    margin: 0 auto 0 auto;
+    transform: scale(1);
+    width: 64vw;
   }
 
   .footerTop {
-    margin: 0 0 0 75px;
+    margin: 0 auto;
+    width: 80vw;
   }
 
 }
 
 @media (max-width: 1280px) {
-
-  .gradient2 {
-    top: 70px;
-    right: -72px;
-    transform: scale(0.85);
-  }
 
   .gradient3 {
     top: 700px;
@@ -868,17 +861,8 @@
     transform: scale(0.9);
   }
 
-  .gradient5 {
-    background-image: url(../assets/gradient5-2.png);
-    width: 1366px;
-    height: 550px;
-    top: 3500px;
-    left: -40px;
-    transform: scale(0.95);
-  }
-
   .header {
-    width: 92vw;
+    width: 90vw;
   }
 
   .headerTopic {
@@ -906,7 +890,7 @@
   }
 
   .modulesContainerExternal {
-    transform: translateX(-54.5%) scale(0.8);
+    transform: translateX(-55%) scale(0.8);
     margin-top: -200px;
     margin-bottom: -250px;
   }
@@ -917,10 +901,15 @@
   }
 
   .carousel {
-    transform: scale(0.8);
-    margin-bottom: 130px;
-    margin-left: -30px;
+    transform: scale(1);
+    margin-bottom: 250px;
     margin-top: 200px;
+  }
+
+  .carouselClients {
+    margin: 0 auto 0 auto;
+    transform: scale(1);
+    width: 69vw;
   }
 
   .footerTop {
@@ -934,29 +923,100 @@
 
 }
 
+@media (max-width: 1210px) and (min-width: 1025px) {
+
+  .header {
+    transform: scale(0.9);
+    width: 95vw;
+  }
+
+  .footerTop {
+    width: 86vw;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 1140px) and (min-width: 1025px) {
+  
+  .header {
+    width: 100vw;
+    margin: 0 0 0 0px;
+  }
+
+  .mainLeft {
+    margin: -75px 0 0 20px;
+    transform: scale(0.8);
+  }
+  
+  .mainAutomatizeArt {
+    margin: 0px 0 0 250px;
+    transform: scale(0.8);
+  }
+
+  .qualitiesContainer {
+    transform: scale(0.82);
+    margin-left: -15px;
+  }
+
+}
+
+@media (max-width: 1090px) and (min-width: 1025px) {
+
+  .gradient4 {
+    top: 1620px;
+    right: -150px;
+    transform: scale(0.8);
+  }
+
+  .header {
+    transform: scale(0.85);
+    width: 110vw;
+    margin: 0 0 0 -50px;
+  }
+
+  .qualitiesContainer {
+    transform: scale(0.8);
+    margin: 50px 0 0 -40px;
+  }
+
+  .carousel {
+    transform: scale(1);
+    margin-bottom: 250px;
+    margin-top: 200px;
+  }
+
+  .carouselClients {
+    margin: 0 auto 0 auto;
+    transform: scale(1);
+    width: 81vw;
+  }
+
+  .footerTop {
+    width: 95vw;
+    margin: 0 auto;
+    transform: scale(0.9);
+  }
+
+}
+
 @media (max-width: 1024px) {
 
   .gradient2 {
     top: 0px;
-    right: -86px;
+    right: -80px;
     transform: scale(0.8);
   }
 
   .gradient3 {
-    top: 400px;
+    top: 350px;
     left: -1400px;
     transform: scale(0.9);
   }
 
   .gradient4 {
-    top: 1300px;
+    top: 1280px;
     right: -156px;
-    transform: scale(0.8);
-  }
-
-  .gradient5 {
-    top: 3000px;
-    left: -199px;
     transform: scale(0.8);
   }
 
@@ -998,7 +1058,7 @@
 
   .modulesContainerExternal {
     transform: translateX(-62.5%) scale(0.65);
-    margin-top: -370px;
+    margin-top: -390px;
     margin-bottom: -250px;
   }
 
@@ -1022,26 +1082,31 @@
   }
 
   .carousel {
-    transform: scale(0.75);
-    margin-bottom: 30px;
-    margin-left: -230px;
+    transform: scale(1);
+    margin-bottom: 250px;
     margin-top: 10px;
   }
 
   .carouselClients {
-    margin: 0 0 0 100px;
+    margin: 0px auto 0 auto;
+    transform: scale(1);
+    width: 85vw;
+  }
+
+  .footer {
+    z-index: 0;
   }
 
   .footerTop {
     display: flex;
     justify-content: space-between;
-    width: 95vw;
+    width: 100vw;
     transform: scale(0.85);
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
   }
 
   .footerLogoLinks {
-    width: 400px;
+    width: 450px;
   }
 
   .footerLine {
@@ -1056,30 +1121,111 @@
 
 }
 
+@media (max-width: 960px) and (min-width: 769px) {
+
+  .gradient3 {
+    top: 420px;
+    left: -1400px;
+    transform: scale(0.9);
+  }
+
+  .mainLeft {
+    margin: -80px 0 0 90px;
+    transform: scale(1);
+  }
+
+  .mainAutomatizeArt {
+    display: none;
+  }
+
+  .mainStars {
+    margin: 90px auto -20px auto;
+    z-index: 1;
+  }
+
+  .qualitiesContainer {
+    width: 100vw;
+    transform: scale(0.85);
+    margin: 70px 0 0px 0px;
+  }
+
+  .footerTop {
+    width: 110vw;
+    transform: scale(0.8);
+    margin: 0px 0 0 0;
+  }
+
+  .footerLogoLinks {
+    width: 450px;
+  }
+
+}
+
+@media (max-width: 800px) and (min-width: 769px) {
+
+  .qualitiesContainer {
+    width: 120vw;
+    transform: scale(0.73);
+    margin: 70px 0 0px -75px;
+  }
+
+  .modulesDetails {
+    width: 115%;
+    transform: scale(0.95);
+  }
+
+  .aboutPoint {
+    transform: scale(1.1);
+  }
+
+  .carousel {
+    transform: scale(1);
+    margin-bottom: 250px;
+    margin-top: 10px;
+  }
+
+  .carouselClients {
+    margin: 0px auto 0 auto;
+    transform: scale(0.9);
+    width: 100vw;
+  }
+
+  .footerTop {
+    width: 125vw;
+    transform: scale(0.75);
+    margin: 30px 0 0 0;
+  }
+
+  .footerLogoLinks {
+    width: 420px;
+  }
+
+}
+
 @media (max-width: 768px) {
 
   .gradient2 {
     top: 50px;
-    right: -165px;
+    right: -160px;
     transform: scale(0.6);
   }
 
   .gradient3 {
-    top: 400px;
-    left: -1490px;
+    top: 420px;
+    left: -1400px;
     transform: scale(0.9);
   }
 
   .gradient4 {
-    top: 1100px;
+    top: 1200px;
     right: -380px;
     transform: scale(0.5);
   }
 
   .gradient5 {
-    top: 2550px;
-    left: -320px;
-    transform: scale(0.6);
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .mainLeft {
@@ -1097,14 +1243,15 @@
   }
 
   .qualitiesContainer {
-    transform: scale(0.6);
-    margin-left: -200px;
-    margin-top: 50px;
+    transform: scale(0.7);
+    width: 125vw;
+    margin: 50px 0 0 -100px;
+    
   }
 
   .modulesContainerExternal {
-    transform: translateX(-71.5%) scale(0.5);
-    margin-top: -580px;
+    transform: translateX(-72%) scale(0.5);
+    margin-top: -600px;
     margin-bottom: -250px;
   }
 
@@ -1113,27 +1260,41 @@
     width: 188vw;
   }
 
+  .modulesContainerText2 {
+    font-size: 32px;
+    width: 610px;
+  }
+
+  .modulesDetails {
+    width: 100%;
+    transform: scale(1.1);
+    margin: 50px auto 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .carousel {
-    transform: scale(0.75);
-    margin: -200px auto -70px auto;
+    transform: scale(1);
+    margin: -200px auto 200px auto;
     width: 100vw;
   }
 
   .carouselClients {
-    margin: 0 0 0 -40px;
-    transform: scale(0.85);
-    width: 115vw;
+    margin: 0 auto 0 auto;
+    transform: scale(0.9);
+    width: 100vw;
   }
 
   .footer {
-    transform: scale(0.9);
+    transform: scale(1);
   }
 
   .footerTop {
     width: 123vw;
-    margin-top: 100px;
-    margin-left: 30px;
-    transform: scale(0.7);
+    transform: scale(0.75);
+    margin: 0 0 0 0;
   }
 
   .footerLogoLinks {
@@ -1151,12 +1312,65 @@
 
 }
 
+@media (max-width: 700px) {
+
+  .gradient2 {
+    top: 100px;
+    right: -160px;
+    transform: scale(0.6);
+  }
+
+  .gradient5 {
+    bottom: -120px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .mainLeft {
+    margin: -80px 0 0 50px;
+    transform: scale(1);
+  }
+
+  .qualitiesContainer {
+    width: 135vw;
+    transform: scale(0.65);
+    margin: 60px 0 -20px -120px;
+  }
+
+  .carousel {
+    transform: scale(0.8);
+    margin: -220px auto 150px auto;
+    width: 100vw;
+  }
+
+  .carouselClients {
+    margin: 0 0 0 -40px;
+    transform: scale(0.9);
+    width: 115vw;
+  }
+
+  .footer {
+    transform: scale(1);
+  }
+
+  .footerTop {
+    width: 140vw;
+    transform: scale(0.65);
+    margin: 0 0 0 0;
+  }
+
+  .footerLogoLinks {
+    width: 400px;
+  }
+
+}
+
 @media (max-width: 640px) {
 
   .gradient2 {
-    top: 400px;
-    right: -166px;
-    transform: scale(0.6);
+    top: 500px;
+    right: -120px;
+    transform: scale(0.7);
   }
 
   .gradient3 {
@@ -1166,18 +1380,15 @@
   }
 
   .gradient4 {
-    top: 1800px;
+    top: 1950px;
     right: -381px;
     transform: scale(0.5);
   }
 
   .gradient5 {
-    background-image: url(../assets/gradient5-3.png);
-    width: 640px;
-    height: 640px;
-    top: 3450px;
-    left: 0px;
-    transform: scale(1.02);
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .hoverMenu {
@@ -1205,7 +1416,7 @@
 
   .modulesContainerExternal {
     transform: translateX(-76%) scale(0.42);
-    margin-top: -850px;
+    margin-top: -900px;
     margin-bottom: -250px;
   }
 
@@ -1218,7 +1429,7 @@
     transform: scale(1.5);
   }
 
-  .modulesContainer p {
+  .modulesContainerText1 {
     transform: scale(1.5);
     margin: 70px 0 50px 0;
   }
@@ -1226,39 +1437,36 @@
   .logosContainer {
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: first baseline;
     height: 400px;
     transform: scale(1.25);
     margin: 100px 0 100px 0;
+    width: 500px;
   }
 
   .modulesContainerText2 {
-    font-size: 24px;
-    width: 460px;
+    font-size: 38px;
+    width: 730px;
   }
 
-  .modulesDetailsContainerMM {
-    margin: 50px 0 100px 0;
+  .modulesDetails {
+    width: 100%;
+    transform: scale(1.1);
+    margin: 50px auto 150px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 1800px;
   }
 
-  .modulesDetailsContainerDA {
-    margin: 50px 0 100px 0;
-  }
-
-  .modulesDetailsContainerRA {
-    margin: 50px 0 100px 0;
-  }
-
-  .buttonMM {
-    margin: 70px 0 0 0;
-  }
-
-  .buttonRA {
-    margin: 70px 0 0 0;
-  }
-
-  .buttonDA {
-    margin: 70px 0 0 0;
+  .modulesDetailsContainerInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: first baseline;
+    transform: scale(1.15);
+    height: 350px;
   }
 
   .aboutPoint {
@@ -1271,39 +1479,164 @@
   }
 
   .carousel {
-    transform: scale(0.75);
-    margin: -500px auto -20px auto;
+    transform: scale(0.9);
+    margin: -550px auto 0px auto;
     width: 100vw;
   }
 
   .carouselClients {
-    margin: 0 0 0 -80px;
-    transform: scale(0.85);
-    width: 128vw;
+    margin: 0 0 0 0px;
+    transform: scale(0.9);
+    width: 110vw;
   }
 
   .footerTop {
     flex-direction: column;
-    transform: scale(1);
+    transform: scale(0.9);
     width: 600px;
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
   }
 
   .footerLogoLinks {
     display: flex;
-    width: 475px;
+    width: 450px;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
   }
 
   .footerSubscribe {
     transform: scale(0.85);
-    margin: 0 auto 30px auto;
+    margin: 0 auto 0px auto;
   }
 
   .footerSocials {
+    transform: scale(0.9);
+    margin: -10px auto -10px auto;
+  }
+
+}
+
+@media (max-width: 580px) {
+
+  .gradient3 {
+    top: 1500px;
+    left: -1400px;
+    transform: scale(0.8) rotate(90deg);
+  }
+
+  .gradient4 {
+    top: 1900px;
+    right: -381px;
+    transform: scale(0.5);
+  }
+
+  .hoverMenu {
+    padding: 0 30px 0 0;
+    width: 90vw;
+  }
+
+  .modulesContainerExternal {
+    transform: translateX(-76%) scale(0.42);
+    margin-top: -900px;
+    margin-bottom: -250px;
+  }
+
+  .modulesDetails {
+    width: 100vw;
     transform: scale(1);
-    margin: 0 auto 0 auto;
+    margin-bottom: 50px;
+  }
+  
+  .modulesDetailsContainerRA {
+    margin-left: 50px;
+  }
+
+  .aboutPoint {
+    background-image: url(../assets/about-point-mobile.png);
+    width: 770px;
+    height: 258px;
+    margin: 100px 0 -225px 0;
+    cursor: pointer;
+    transition: 1.5s;
+    transform: scale(1.6);
+  }
+
+  .carousel {
+    transform: scale(0.9);
+    margin: -500px auto 0px auto;
+    width: 100vw;
+  }
+
+  .carouselClients {
+    margin: 15px 0 0 -30px;
+    transform: scale(0.9);
+    width: 118vw;
+  }
+
+  .footerTop {
+    transform: scale(0.85);
+    width: 500px;
+    margin: 100px auto 0 auto;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .gradient3 {
+    top: 1400px;
+    left: -1400px;
+    transform: scale(0.8) rotate(90deg);
+  }
+
+  .gradient4 {
+    top: 1750px;
+    right: -381px;
+    transform: scale(0.5);
+  }
+
+  .mainLeft {
+    margin: -100px auto 0 auto;
+    transform: scale(0.75);
+  }
+
+  .mainStars {
+    margin: 30px auto -20px auto;
+  }
+
+  .modulesContainerExternal {
+    transform: translateX(-76%) scale(0.42);
+    margin-top: -850px;
+    margin-bottom: -250px;
+  }
+
+  .modulesDetails {
+    width: 100%;
+    transform: scale(0.95);
+    margin: -50px 0 0px 0;
+  }
+
+  .modulesDetailsContainerRA {
+    margin-left: 60px;
+  }
+
+  .aboutPoint {
+    margin: 100px 0 -225px 0;
+    transform: scale(1.4);
+  }
+
+  .carousel {
+    transform: scale(0.85);
+    margin: -500px auto 0px auto;
+    width: 100vw;
+  }
+
+  .carouselClients {
+    margin: 15px 0 0 0px;
+    transform: scale(1);
+    width: 146vw;
+    background-color: #FFF;
   }
 
 }
@@ -1324,20 +1657,16 @@
 
   .gradient3 {
     top: 1200px;
-    left: -1400px;
+    left: -1550px;
     transform: scale(0.8) rotate(90deg);
+    position: absolute;
+    z-index: 0;
   }
 
   .gradient4 {
-    top: 1550px;
+    top: 1650px;
     right: -375px;
     transform: scale(0.5);
-  }
-
-  .gradient5 {
-    top: 3180px;
-    left: -80px;
-    transform: scale(0.75);
   }
 
   .hoverMenu {
@@ -1369,7 +1698,7 @@
 
   .modulesContainerExternal {
     transform: translateX(-82%) scale(0.32);
-    margin-top: -1200px;
+    margin-top: -1270px;
     margin-bottom: -250px;
   }
 
@@ -1379,106 +1708,67 @@
   }
 
   .modulesContainer h1 {
-    transform: scale(1.8);
+    transform: scale(2);
   }
 
-  .modulesContainer p {
-    transform: scale(1.7);
-    margin: 70px 0 50px 0;
+  .modulesContainerText1 {
+    transform: scale(1.9);
+    margin: 80px 0 0 0;
   }
 
   .logosContainer {
-    height: 500px;
-    transform: scale(1.3);
-    margin: 150px 0 150px 460px;
-    align-items: flex-start;
-    width: 800px;
+    transform: scale(1.9);
+    margin: 250px 0 220px 0;
+    height: 350px;
   }
 
   .modulesContainerText2 {
-    font-size: 28px;
-    width: 540px;
+    transform: scale(1.3);
   }
 
   .modulesDetails {
-    width: 1400px;
+    width: 100%;
+    transform: scale(1.15);
+    margin: 100px 0 230px 0;
   }
 
   .modulesDetailsContainerInfos {
-    margin: 50px 0 0 100px;
-  }
-
-  .modulesDetailsContainerRA {
-    margin: 0 0 100px 100px;
-  }
-
-  .modulesDetailsContainerMM p {
-    margin: 120px 0 100px 0;
-  }
-
-  .modulesDetailsContainerRA p {
-    margin: 120px 0 100px 0;
-  }
-
-  .modulesDetailsContainerDA p {
-    margin: 120px 0 100px 0;
-  }
-
-  .pcMM {
-    margin: 100px 0 0 0;
-  }
-
-  .modulesDetailsContainerRA .pcRA {
-    margin: 100px 0 0 50px;
-  }
-
-  .modulesDetailsContainerDA .pcDA {
-    margin: 100px 0 0 0;
-  }
-
-  .logoMM {
-    transform: scale(1.5);
-  }
-
-  .logoRA {
-    transform: scale(1.5);
-  }
-
-  .logoDA {
-    transform: scale(1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: first baseline;
+    transform: scale(1.18);
+    height: 370px;
   }
 
   .aboutPoint {
     background-image: url(../assets/about-point-mobile.png);
     width: 770px;
     height: 258px;
-    margin: 100px 0 -225px 0;
+    margin: 100px 0 0px 0;
     cursor: pointer;
     transition: 1.5s;
-    transform: scale(1.7);
-  }
-  
-  .aboutPoint:hover {
-    transform: scale(1.75);
+    transform: scale(1.8);
   }
 
   .carousel {
-    transform: scale(0.75);
-    margin: -880px auto -135px auto;
+    transform: scale(0.8);
+    margin: -1000px auto -40px auto;
     width: 100vw;
   }
 
   .carouselClients {
-    margin: 0 0 0 -170px;
-    transform: scale(0.6);
-    width: 175vw;
+    margin: 15px 0 0 0px;
+    transform: scale(1);
+    width: 146vw;
+    background-color: #FFF;
   }
 
   .footerTop {
     flex-direction: column;
     transform: scale(0.8);
     width: 480px;
-    margin: 150px auto -50px auto;
+    margin: 150px auto 0px auto;
   }
 
   .footerLogoLinks {
@@ -1487,39 +1777,251 @@
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 430px) {
 
   .gradient1 {
-    top: -700px;
-    left: -920px;
+    top: -850px;
+    left: -900px;
     transform: scale(0.7);
   }
 
   .gradient2 {
-    top: 200px;
+    top: 150px;
     right: -240px;
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
 
   .gradient3 {
-    top: 900px;
-    left: -1600px;
+    top: 1300px;
+    left: -1500px;
     transform: scale(0.8) rotate(90deg);
   }
 
   .gradient4 {
-    top: 1200px;
+    top: 1650px;
     right: -375px;
     transform: scale(0.5);
   }
 
-  .gradient5 {
-    background-image: url(../assets/gradient5-4.png);
+  .mainLeft {
+    margin: -150px auto -50px auto;
+    transform: scale(0.6);
+  }
+
+  .modulesContainerExternal {
+    transform: translateX(-82%) scale(0.32);
+    margin-top: -1250px;
+    margin-bottom: -250px;
+  }
+
+  .modulesDetails {
+    width: 125%;
+    transform: scale(1.15);
+    margin: 100px 0 180px 0px;
+  }
+
+  .pcMM {
+    margin: 0 -100px 0 0;
+  }
+
+  .pcRA {
+    margin: 0 0 0 -100px;
+  }
+
+  .pcDA {
+    margin: 0 -100px 0 0;
+  }
+
+  .aboutPoint {
+    background-image: url(../assets/about-point-320.png);
+    width: 584px;
+    height: 390px;
+    margin: 250px 0 -225px 20px;
+    cursor: pointer;
+    transition: 1.5s;
+    transform: scale(2.1);
+  }
+
+  .carousel {
+    transform: scale(0.9);
+    margin: -850px auto -20px auto;
+    width: 100vw;
+  }
+
+  .footerTop {
+    flex-direction: column;
+    transform: scale(0.8);
+    width: 520px;
+    margin: 150px 0 0px 0;
+  }
+
+  .footerLogoLinks {
+    width: 420px;
+  }
+
+}
+
+@media (max-width: 370px) {
+
+  .gradient3 {
+    top: 1200px;
+    left: -1450px;
+    transform: scale(0.8) rotate(90deg);
+  }
+
+  .gradient4 {
+    top: 1550px;
+    right: -375px;
+    transform: scale(0.5);
+  }
+
+  .header {
+    width: 95vw;
+  }
+
+  .headerLogo {
+    transform: scale(0.8);
+    margin: 0 0 0 0px;
+    width: 240px;
+    background-repeat: no-repeat;
+  }
+
+  .mainLeft {
+    margin: -150px auto -80px auto;
+    transform: scale(0.55);
+  }
+
+  .qualitiesContainer {
+    transform: scale(0.9);
+    margin: 50px auto 0 auto;
     width: 320px;
-    height: 550px;
-    top: 2800px;
-    left: 0px;
+  }
+
+  .modulesContainerExternal {
+    transform: translateX(-87%) scale(0.21);
+    margin-top: -2350px;
+    margin-bottom: -250px;
+  }
+
+  .modulesContainer {
+    margin: 0 auto;
+    width: 450vw;
+  }
+
+  .modulesContainer h1 {
+    transform: scale(2.5);
+    margin: 100px 0 0 0;
+  }
+
+  .modulesContainerText1 {
+    transform: scale(2.5);
+    margin: 100px 0 0 0;
+  }
+
+  .logosContainer {
+    transform: scale(2.5);
+    margin: 400px 0 350px 0;
+    height: 350px;
+  }
+
+  .modulesContainerText2 {
+    transform: scale(1.8);
+    margin: 100px 0 100px 0;
+  }
+
+  .pcMM {
+    display: none;
+  }
+
+  .pcRA {
+    display: none;
+  }
+
+  .pcDA {
+    display: none;
+  }
+
+  .modulesDetails {
+    transform: scale(2);
+    margin: 800px 0 1100px 0px;
+  }
+
+  .modulesDetailsContainerMM {
+    margin: 0 0 0 0;
+  }
+
+  .modulesDetailsContainerRA {
+    margin: 0 0 0 0;
+  }
+
+  .modulesDetailsContainerDA {
+    margin: 0 0 0 0;
+  }
+
+  .aboutPoint {
+    background-image: url(../assets/about-point-320.png);
+    width: 584px;
+    height: 390px;
+    margin: 200px 0 -225px 0;
+    cursor: pointer;
+    transition: 1.5s;
+    transform: scale(2.6);
+  }
+
+  .carousel {
+    transform: scale(0.9);
+    margin: -1900px auto -28px auto;
+    width: 100vw;
+  }
+
+  .carouselClients {
+    margin: 15px 0 0 0px;
     transform: scale(1);
+    width: 225vw;
+    background-color: #FFF;
+  }
+
+  .footerTop {
+    flex-direction: column;
+    transform: scale(0.78);
+    width: 520px;
+    margin: 150px 0 -25px 0;
+  }
+
+  .footerLogoLinks {
+    width: 380px;
+  }
+
+  .footerInput {
+    width: 450px;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .gradient1 {
+    top: -800px;
+    left: -920px;
+    transform: scale(0.7);
+  }
+
+  .gradient3 {
+    top: 1150px;
+    left: -1700px;
+    transform: scale(1) rotate(90deg);
+  }
+
+  .gradient4 {
+    top: 1600px;
+    right: -375px;
+    transform: scale(0.8);
+  }
+
+  .gradient5 {
+    bottom: -85px;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .header {
@@ -1557,7 +2059,7 @@
 
   .modulesContainerExternal {
     transform: translateX(-87%) scale(0.21);
-    margin-top: -1900px;
+    margin-top: -2800px;
     margin-bottom: -250px;
   }
 
@@ -1570,110 +2072,41 @@
     transform: scale(2.1);
   }
 
-  .modulesContainer p {
+  .modulesContainerText1 {
     transform: scale(2.2);
-    margin: 100px 0 50px 0;
-  }
-
-  .logosContainer {
-    height: 600px;
-    transform: scale(1.3);
-    margin: 250px 0 200px 460px;
-    align-items: flex-start;
-    width: 800px;
-  }
-
-  .logoMM {
-    transform: scale(1.8);
-  }
-
-  .buttonMM {
-    transform: scale(1.5);
-  }
-
-  .logoRA {
-    transform: scale(1.8);
-  }
-
-  .buttonRA {
-    transform: scale(1.5);
-  }
-
-  .logoDA {
-    transform: scale(1.8);
-  }
-
-  .buttonDA {
-    transform: scale(1.5);
-  }
-
-  .modulesContainerText2 {
-    font-size: 28px;
-    width: 540px;
   }
 
   .modulesDetails {
-    transform: scale(1.09);
-    margin: 150px 0 0 -100px;
-  }
-
-  .modulesDetailsContainerInfos p {
-    margin: 150px 0 150px 0;
+    transform: scale(2.2);
+    margin: 900px 0 1100px 0px;
   }
 
   .modulesDetailsContainerMM {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 0 0;
-  }
-
-  .pcMM {
-    display: none;
+    margin: -50px 0 0 0;
   }
 
   .modulesDetailsContainerRA {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100px 0 100px 0;
-  }
-
-  .pcRA {
-    display: none;
+    margin: -200px 0 -200px 0;
   }
 
   .modulesDetailsContainerDA {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 300px 0;
-  }
-
-  .pcDA {
-    display: none;
+    margin: 0 0 0 0;
   }
 
   .aboutPoint {
-    background-image: url(../assets/about-point-320.png);
-    width: 584px;
-    height: 390px;
-    margin: 200px 0 -225px 0;
+    background-image: url(../assets/about-point-vertical.png);
+    width: 300px;
+    height: 665px;
+    margin: 900px 0 -225px 0;
     cursor: pointer;
     transition: 1.5s;
-    transform: scale(2.3);
-  }
-  
-  .aboutPoint:hover {
-    transform: scale(2.1);
+    transform: scale(4);
+    background-repeat: no-repeat;
   }
 
   .carousel {
-    transform: scale(0.8);
-    margin: -1500px auto 0px auto;
+    transform: scale(0.9);
+    margin: -2200px auto 0px auto;
     width: 100vw;
   }
 
@@ -1683,25 +2116,25 @@
   }
 
   .carouselClients {
-    margin: 0 0 0 -80px;
-    transform: scale(0.8);
+    margin: 0 0 0 -50px;
+    transform: scale(0.9);
     width: 260vw;
   }
 
   .footerTop {
-    flex-direction: column;
     transform: scale(0.7);
     width: 320px;
-    margin: 50px 0 -50px -80px;
+    margin: 50px 0 -40px -80px;
   }
 
-  .footerSubscribe {
-    transform: scale(0.8);
-    margin: 0 0 30px -40px;
+  .footerLogoLinks {
+    width: 380px;
+    margin: 0 0 0 30px;
   }
 
-  .footerSubscribe h2 {
-    width: 360px;
+  .footerButton {
+    transform: scale(1.2);
+    margin: 5px 0 0 20px;
   }
 
 }

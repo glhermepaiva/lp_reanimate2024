@@ -45,50 +45,15 @@ export default function Home() {
         `
             .swiper-wrapper {
                 width: 100vw;
-                height: 200px;
+                height: 150px;
                 margin: 0px 0 20px 0;
             }
-
-            .swiper-pagination {
-                margin: 0px 0 50px 33vw !important;
-                width: 150px !important;
-            } 
 
             .swiper-pagination-bullet {
                 width: 27px;
                 height: 27px;
                 margin: 0px 10px !important;
                 background-color: #E8336A;
-            }
-            @media (max-width: 1800px) {
-              .swiper-pagination {
-                margin: 0px 0 50px 35vw !important;
-              } 
-            }
-            @media (max-width: 1680px) {
-              .swiper-pagination {
-                margin: 0px 0 50px 38vw !important;
-              } 
-            }
-            @media (max-width: 1500px) {
-              .swiper-pagination {
-                margin: 0px 0 50px 42vw !important;
-              } 
-            }
-            @media (max-width: 768px) {
-              .swiper-pagination {
-                margin: 0px 0 50px 38vw !important;
-              } 
-            }
-            @media (max-width: 480px) {
-              .swiper-pagination {
-                margin: 0px 0 50px 32vw !important;
-              } 
-            }
-            @media (max-width: 320px) {
-              .swiper-pagination {
-                margin: 0px 0 50px 25vw !important;
-              } 
             }
         `,
         ],
@@ -247,131 +212,132 @@ export default function Home() {
         <title>re.animate | Transforme dias de trabalho em minutos</title>
         <meta name='description' content='Transforme dias de trabalho em minutos com o re.animate.' />
       </Head>
-      <div className={styles.gradient1} />
-      <div className={styles.gradient2} />
 
       <div className={styles.main}>
 
-        <div className={styles.header}>
-          <div className={styles.headerLogo} />
-          <div className={styles.headerHamburger} onClick={openMenu}/>
-          <div className={`${styles.hoverMenu} ${menuOpen ? styles.open : ''}`}>
-            <div className={styles.menuClose} onClick={closeMenu}/>
-            <div className={styles.menuLinks}>
-              <p className={styles.menuTopic} onClick={anchorFeaturesMobile}>FEATURES</p>
-              <p className={styles.menuTopic} onClick={anchorMMMobile}> MASTER MOTION</p>
-              <p className={styles.menuTopic} onClick={anchorRAMobile}>REPLICATE</p>
-              <p className={styles.menuTopic} onClick={anchorDAMobile}>DYNAMIC</p>
-              <p className={styles.menuTopic} onClick={anchorPointMobile}>POINT</p>
-              <p className={styles.menuTopic} onClick={anchorClientsMobile}>CLIENTES</p>
-              <Link href="/formbr" style={{textDecoration: 'none', color: '#FFFFFF'}}>
-                <p className={styles.menuTopic}>CONTATO</p>
+          <div className={styles.gradient1} />
+          <div className={styles.gradient2} />
+
+          <div className={styles.header}>
+            <div className={styles.headerLogo} />
+            <div className={styles.headerHamburger} onClick={openMenu}/>
+            <div className={`${styles.hoverMenu} ${menuOpen ? styles.open : ''}`}>
+              <div className={styles.menuClose} onClick={closeMenu}/>
+              <div className={styles.menuLinks}>
+                <p className={styles.menuTopic} onClick={anchorFeaturesMobile}>FEATURES</p>
+                <p className={styles.menuTopic} onClick={anchorMMMobile}> MASTER MOTION</p>
+                <p className={styles.menuTopic} onClick={anchorRAMobile}>REPLICATE</p>
+                <p className={styles.menuTopic} onClick={anchorDAMobile}>DYNAMIC</p>
+                <p className={styles.menuTopic} onClick={anchorPointMobile}>POINT</p>
+                <p className={styles.menuTopic} onClick={anchorClientsMobile}>CLIENTES</p>
+                <Link href="/formbr" style={{textDecoration: 'none', color: '#FFFFFF'}}>
+                  <p className={styles.menuTopic}>CONTATO</p>
+                </Link>
+                <div className={styles.menuLoginButton} onClick={reanimLink} />
+              </div>
+              <div className={styles.menuSocials}>
+                <div className={styles.footerFace} onClick={faceLink} />
+                <div className={styles.footerInsta} onClick={instaLink} />
+                <div className={styles.footerLinkedin} onClick={linkedinLink} />
+              </div>
+              <div className={styles.menuLogo} />
+            </div> 
+            <div className={styles.headerTopicsContainer}>
+              <p className={styles.headerTopic} onClick={anchorFeatures}>FEATURES</p>
+              <p className={styles.headerTopic} onClick={anchorMM}> MASTER MOTION</p>
+              <p className={styles.headerTopic} onClick={anchorRA}>REPLICATE</p>
+              <p className={styles.headerTopic} onClick={anchorDA}>DYNAMIC</p>
+              <p className={styles.headerTopic} onClick={anchorPoint}>POINT</p>
+              <p className={styles.headerTopic} onClick={anchorClients}>CLIENTES</p>
+              <Link href="/formbr" style={{textDecoration: 'none', color: '#000000'}}>
+                <p className={styles.headerTopic}>CONTATO</p>
               </Link>
-              <div className={styles.menuLoginButton} onClick={reanimLink} />
+              <div className={styles.headerLoginButton} onClick={reanimLink} />
             </div>
-            <div className={styles.menuSocials}>
-              <div className={styles.footerFace} onClick={faceLink} />
-              <div className={styles.footerInsta} onClick={instaLink} />
-              <div className={styles.footerLinkedin} onClick={linkedinLink} />
+          </div>
+
+          <div className={styles.mainFirstSection}>
+            <div className={styles.mainLeft}>
+              <div className={styles.mainText} />
+              <p>A plataforma de automação que vai revolucionar sua produção de banner digitais.</p>
+              <Link href="/formbr">
+                <div className={styles.mainContrateButton} />
+              </Link>
             </div>
-            <div className={styles.menuLogo} />
-          </div> 
-          <div className={styles.headerTopicsContainer}>
-            <p className={styles.headerTopic} onClick={anchorFeatures}>FEATURES</p>
-            <p className={styles.headerTopic} onClick={anchorMM}> MASTER MOTION</p>
-            <p className={styles.headerTopic} onClick={anchorRA}>REPLICATE</p>
-            <p className={styles.headerTopic} onClick={anchorDA}>DYNAMIC</p>
-            <p className={styles.headerTopic} onClick={anchorPoint}>POINT</p>
-            <p className={styles.headerTopic} onClick={anchorClients}>CLIENTES</p>
-            <Link href="/formbr" style={{textDecoration: 'none', color: '#000000'}}>
-              <p className={styles.headerTopic}>CONTATO</p>
-            </Link>
-            <div className={styles.headerLoginButton} onClick={reanimLink} />
-          </div>
-        </div>
-
-        <div className={styles.mainFirstSection}>
-          <div className={styles.mainLeft}>
-            <div className={styles.mainText} />
-            <p>A plataforma de automação que vai revolucionar sua produção de banner digitais.</p>
-            <Link href="/formbr">
-              <div className={styles.mainContrateButton} />
-            </Link>
-          </div>
-          <div className={styles.mainRight}>
-            <div className={styles.mainAutomatizeArt} />
-          </div>
-        </div>
-
-        <div className={styles.mainStars} />
-      
-        <div className={styles.qualitiesContainer} ref={featuresRef} >
-          <div>
-            <div className={styles.iconCheck} />
-            <h2>Mais qualidade</h2>
-            <p>Replique a peça master em diversos formatos tanto animados quanto estáticos.</p>
-          </div>
-          <div>
-            <div className={styles.iconProject} />
-            <h2>Mais escalabilidade</h2>
-            <p>Crie milhares de peças a partir de uma só.</p>
-          </div>
-          <div>
-            <div className={styles.iconClock} />
-            <h2>Mais agilidade</h2>
-            <p>Tenha uma campanha inteira nas mãos em poucos cliques.</p>
-          </div>
-        </div>
-      
-
-        <div className={styles.gradient3} />
-        <div className={styles.gradient4} />
-
-        <div className={styles.modulesContainerExternal}>
-          <div className={styles.modulesContainer}>
-            <h1>Revolucione a sua operação!</h1>
-            <p className={styles.modulesContainerText1}>O <b>re.animate</b> é dividido em três módulos:</p>
-            <div className={styles.logosContainer}>
-              <div className={styles.logoMM} />
-              <div className={styles.logoRA} />
-              <div className={styles.logoDA} />
+            <div className={styles.mainRight}>
+              <div className={styles.mainAutomatizeArt} />
             </div>
-            <p className={styles.modulesContainerText2}>Três programas que vão trazer automação a sua linha de produção de banners.</p>
+          </div>
 
-          <div className={styles.modulesDetails}>
+          <div className={styles.mainStars} />
+        
+          <div className={styles.qualitiesContainer} ref={featuresRef} >
+            <div>
+              <div className={styles.iconCheck} />
+              <h2>Mais qualidade</h2>
+              <p>Replique a peça master em diversos formatos tanto animados quanto estáticos.</p>
+            </div>
+            <div>
+              <div className={styles.iconProject} />
+              <h2>Mais escalabilidade</h2>
+              <p>Crie milhares de peças a partir de uma só.</p>
+            </div>
+            <div>
+              <div className={styles.iconClock} />
+              <h2>Mais agilidade</h2>
+              <p>Tenha uma campanha inteira nas mãos em poucos cliques.</p>
+            </div>
+          </div>
+        
 
-            <div className={styles.modulesDetailsContainerMM}>
-              <div className={styles.pcMM} ref={mmRef} />
-              <div className={styles.modulesDetailsContainerInfos}>
+          <div className={styles.gradient3} />
+          <div className={styles.gradient4} />
+
+          <div className={styles.modulesContainerExternal}>
+            <div className={styles.modulesContainer}>
+              <h1>Revolucione a sua operação!</h1>
+              <p className={styles.modulesContainerText1}>O <b>re.animate</b> é dividido em três módulos:</p>
+              <div className={styles.logosContainer}>
                 <div className={styles.logoMM} />
-                <p>Dê vida às suas criações de forma simples, e criativa, transformando elementos estáticos, em animações de alto nível. De maneira rápida, fácil e totalmente no code.</p>
-                <div className={styles.buttonMM} onClick={reanimLink} />
-              </div>
-            </div>
-
-            <div className={styles.modulesDetailsContainerRA}>
-              <div className={styles.modulesDetailsContainerInfos}>
                 <div className={styles.logoRA} />
-                <p>Otimize o processo de replicação para diversos formatos em apenas um clique, mantendo a qualidade visual. Mudou alguma informação? Altere rapidamente de modo automático toda sua linha criativa.</p>
-                <div className={styles.buttonRA} onClick={reanimLink} />
-              </div>
-              <div className={styles.pcRA} ref={raRef}/>
-            </div>
-
-            <div className={styles.modulesDetailsContainerDA}>
-              <div className={styles.pcDA} ref={daRef} />
-              <div className={styles.modulesDetailsContainerInfos}>
                 <div className={styles.logoDA} />
-                <p>Em casos onde existem muitos produtos e ofertas a serem publicados, crie um feed com inúmeras variações de conteúdos em um só lugar utilizando apenas o KV.</p>
-                <div className={styles.buttonDA} onClick={reanimLink} />
               </div>
+              <p className={styles.modulesContainerText2}>Três programas que vão trazer automação a sua linha de produção de banners.</p>
+
+            <div className={styles.modulesDetails}>
+
+              <div className={styles.modulesDetailsContainerMM}>
+                <div className={styles.pcMM} ref={mmRef} />
+                <div className={styles.modulesDetailsContainerInfos}>
+                  <div className={styles.logoMM} />
+                  <p>Dê vida às suas criações de forma simples, e criativa, transformando elementos estáticos, em animações de alto nível. De maneira rápida, fácil e totalmente no code.</p>
+                  <div className={styles.buttonMM} onClick={reanimLink} />
+                </div>
+              </div>
+
+              <div className={styles.modulesDetailsContainerRA}>
+                <div className={styles.modulesDetailsContainerInfos}>
+                  <div className={styles.logoRA} />
+                  <p>Otimize o processo de replicação para diversos formatos em apenas um clique, mantendo a qualidade visual. Mudou alguma informação? Altere rapidamente de modo automático toda sua linha criativa.</p>
+                  <div className={styles.buttonRA} onClick={reanimLink} />
+                </div>
+                <div className={styles.pcRA} ref={raRef}/>
+              </div>
+
+              <div className={styles.modulesDetailsContainerDA}>
+                <div className={styles.pcDA} ref={daRef} />
+                <div className={styles.modulesDetailsContainerInfos}>
+                  <div className={styles.logoDA} />
+                  <p>Em casos onde existem muitos produtos e ofertas a serem publicados, crie um feed com inúmeras variações de conteúdos em um só lugar utilizando apenas o KV.</p>
+                  <div className={styles.buttonDA} onClick={reanimLink} />
+                </div>
+              </div>
+
             </div>
 
+            <div className={styles.aboutPoint} ref={pointRef} onClick={pointLink} />
           </div>
-
-          <div className={styles.aboutPoint} ref={pointRef} onClick={pointLink} />
         </div>
-      </div>
 
         <div className={styles.carousel}>
           <h1 className={styles.carouselTitle} ref={clientsRef}>Nossos clientes:</h1>
@@ -402,39 +368,40 @@ export default function Home() {
             </SwiperSlide>
           </swiper-container>
         </div>
-      </div>
 
-      <div className={styles.gradient5} />
-
-      <div className={styles.footer}>
-        <div className={styles.footerTop}>
-          <div className={styles.footerLogoLinks}>
-            <div className={styles.footerLogo} onClick={anchorHeader} />
-            <div>
-              <h2>Reanimate</h2>
-              <p onClick={anchorHeader}>Sobre</p>
-              <p onClick={anchorFeatures}>Features</p>
-              <Link href="/formbr" style={{textDecoration: 'none', color: '#FFFFFF'}}>
-                <p>Suporte</p>
-              </Link>
-              <Link href="/formbr" style={{textDecoration: 'none', color: '#FFFFFF'}}>
-                <p>Contato</p>
-              </Link>
+        <div className={styles.footer}>
+          <div className={styles.gradient5} />
+            <div className={styles.footerTop}>
+              <div className={styles.footerLogoLinks}>
+                <div className={styles.footerLogo} onClick={anchorHeader} />
+                <div>
+                  <h2>Reanimate</h2>
+                  <p onClick={anchorHeader}>Sobre</p>
+                  <p onClick={anchorFeatures}>Features</p>
+                  <Link href="/formbr" style={{textDecoration: 'none', color: '#FFFFFF'}}>
+                    <p>Suporte</p>
+                  </Link>
+                  <Link href="/formbr" style={{textDecoration: 'none', color: '#FFFFFF'}}>
+                    <p>Contato</p>
+                  </Link>
+                </div>
+              </div>
+              <div className={styles.footerSubscribe}>
+                <h2>Siga-nos para mais informações:</h2>
+                <input placeholder='seuemail@seudominio.com.br' className={styles.footerInput}/>
+                <div className={styles.footerButton} onClick={() => alert('Obrigado por se inscrever!')} />
+              </div>
             </div>
-          </div>
-          <div className={styles.footerSubscribe}>
-            <h2>Siga-nos para mais informações:</h2>
-            <input placeholder='seuemail@seudominio.com.br' className={styles.footerInput}/>
-            <div className={styles.footerButton} onClick={() => alert('Obrigado por se inscrever!')} />
-          </div>
+            <div className={styles.footerBottom}>
+              <div className={styles.footerLine} />
+              <div className={styles.footerSocials}>
+                <div className={styles.footerFace} onClick={faceLink} />
+                <div className={styles.footerInsta} onClick={instaLink} />
+                <div className={styles.footerLinkedin} onClick={linkedinLink} />
+              </div>
+              <div className={styles.footerLegal}>©2024 PointMedia. All Rights Reserved</div>
+            </div>
         </div>
-        <div className={styles.footerLine} />
-        <div className={styles.footerSocials}>
-          <div className={styles.footerFace} onClick={faceLink} />
-          <div className={styles.footerInsta} onClick={instaLink} />
-          <div className={styles.footerLinkedin} onClick={linkedinLink} />
-        </div>
-        <div className={styles.footerLegal}>©2024 PointMedia. All Rights Reserved</div>
       </div>
       
     </div>
