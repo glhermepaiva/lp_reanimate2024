@@ -107,35 +107,20 @@ export default function Home() {
           top: 0,
           behavior: 'smooth',
         })
+        setMenuOpen(false)
     }
 
     const anchorFeatures = () => {
-        const featuresPosition = featuresRef.current.offsetTop -50;
-        window.scrollTo({
+      const featuresPosition = featuresRef.current.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
           top: featuresPosition,
           behavior: 'smooth',
-        })
-    }
-
-    const anchorFeaturesMobile = () => {
-      const featuresPosition = featuresRef.current.offsetTop;
-      window.scrollTo({
-        top: featuresPosition,
-        behavior: 'smooth',
-      })
+      });
       setMenuOpen(false)
-  }
+    };
 
     const anchorMM = () => {
-      const mmPosition = mmRef.current.offsetTop -50;
-      window.scrollTo({
-        top: mmPosition,
-        behavior: 'smooth',
-      })
-    }
-
-    const anchorMMMobile = () => {
-      const mmPosition = mmRef.current.offsetTop + 880;
+      const mmPosition = mmRef.current.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: mmPosition,
         behavior: 'smooth',
@@ -144,15 +129,7 @@ export default function Home() {
     }
 
     const anchorRA = () => {
-      const raPosition = raRef.current.offsetTop -50;
-      window.scrollTo({
-        top: raPosition,
-        behavior: 'smooth',
-      })
-    }
-
-    const anchorRAMobile = () => {
-      const raPosition = raRef.current.offsetTop + 630;
+      const raPosition = raRef.current.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: raPosition,
         behavior: 'smooth',
@@ -161,15 +138,7 @@ export default function Home() {
     }
 
     const anchorDA = () => {
-      const daPosition = daRef.current.offsetTop -50;
-      window.scrollTo({
-        top: daPosition,
-        behavior: 'smooth',
-      })
-    }
-
-    const anchorDAMobile = () => {
-      const daPosition = daRef.current.offsetTop + 570;
+      const daPosition = daRef.current.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: daPosition,
         behavior: 'smooth',
@@ -178,15 +147,7 @@ export default function Home() {
     }
 
     const anchorPoint = () => {
-      const pointPosition = pointRef.current.offsetTop -50;
-      window.scrollTo({
-        top: pointPosition,
-        behavior: 'smooth',
-      })
-    }
-
-    const anchorPointMobile = () => {
-      const pointPosition = pointRef.current.offsetTop + 350;
+      const pointPosition = pointRef.current.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: pointPosition,
         behavior: 'smooth',
@@ -195,15 +156,7 @@ export default function Home() {
     }
 
     const anchorClients = () => {
-      const clientsPosition = clientsRef.current.offsetTop -50;
-      window.scrollTo({
-        top: clientsPosition,
-        behavior: 'smooth',
-      })
-    }
-
-    const anchorClientsMobile = () => {
-      const clientsPosition = pointRef.current.offsetTop + 550;
+      const clientsPosition = clientsRef.current.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: clientsPosition,
         behavior: 'smooth',
@@ -231,12 +184,12 @@ export default function Home() {
             <div className={`${styles.hoverMenu} ${menuOpen ? styles.open : ''}`}>
               <div className={styles.menuClose} onClick={closeMenu}/>
               <div className={styles.menuLinks}>
-                <p className={styles.menuTopic} onClick={anchorFeaturesMobile}>FEATURES</p>
-                <p className={styles.menuTopic} onClick={anchorMMMobile}> MASTER MOTION</p>
-                <p className={styles.menuTopic} onClick={anchorRAMobile}>REPLICATE</p>
-                <p className={styles.menuTopic} onClick={anchorDAMobile}>DYNAMIC</p>
-                <p className={styles.menuTopic} onClick={anchorPointMobile}>POINT</p>
-                <p className={styles.menuTopic} onClick={anchorClientsMobile}>CLIENTES</p>
+                <p className={styles.menuTopic} onClick={anchorFeatures}>FEATURES</p>
+                <p className={styles.menuTopic} onClick={anchorMM}>MASTER MOTION</p>
+                <p className={styles.menuTopic} onClick={anchorRA}>REPLICATE</p>
+                <p className={styles.menuTopic} onClick={anchorDA}>DYNAMIC</p>
+                <p className={styles.menuTopic} onClick={anchorPoint}>POINT</p>
+                <p className={styles.menuTopic} onClick={anchorClients}>CLIENTES</p>
                 <Link href="/formbr" style={{textDecoration: 'none', color: '#FFFFFF'}}>
                   <p className={styles.menuTopic}>CONTATO</p>
                 </Link>

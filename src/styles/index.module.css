@@ -1147,7 +1147,7 @@
 .footerLogoLinks {
   display: flex;
   flex-direction: row;
-  width: 500px;
+  width: 450px;
   justify-content: space-around;
 }
 
