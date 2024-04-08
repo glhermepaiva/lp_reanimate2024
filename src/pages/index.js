@@ -148,11 +148,14 @@ export default function Home() {
               body: JSON.stringify({ email })
           });
           if (response.ok) {
-              console.log('Email cadastrado com sucesso!');
+              alert('Obrigado, seu email foi cadastrado com sucesso!');
+              setEmail('');
           } else {
+              alert('Por favor garanta que seu endereço de email esteja correto e tente novamente.')
               console.error('Erro ao cadastrar o email:', response.statusText);
           }
       } catch (error) {
+          alert('Por favor garanta que seu endereço de email esteja correto e tente novamente.')
           console.error('Erro ao cadastrar o email:', error.message);
       }
     }
@@ -318,33 +321,33 @@ export default function Home() {
           <div className={styles.gradient4} />
 
           {modalMMOpen ?
-              <div className={styles.galleryModal}>
-                <div className={styles.modalBG} />
-                <div className={styles.modalClose} onClick={closeModalMM} />
-                <video className={styles.videoMM} controls autoPlay muted>
-                  <source src="/mm.mp4" type="video/mp4" />
-                </video>
-              </div>
+            <div className={styles.galleryModal}>
+              <div className={styles.modalBG} />
+              <div className={styles.modalClose} onClick={closeModalMM} />
+              <video className={styles.videoMM} controls autoPlay>
+                <source src="/mm.mp4" type="video/mp4" />
+              </video>
+            </div>
           : null}
 
           {modalRAOpen ?
-                        <div className={styles.galleryModal}>
-                          <div className={styles.modalBG} />
-                          <div className={styles.modalClose} onClick={closeModalRA} />
-                          <video className={styles.videoRA} controls autoPlay muted>
-                            <source src="/ra.mp4" type="video/mp4" />
-                          </video>
-                        </div>
+            <div className={styles.galleryModal}>
+              <div className={styles.modalBG} />
+              <div className={styles.modalClose} onClick={closeModalRA} />
+              <video className={styles.videoRA} controls autoPlay>
+                <source src="/ra.mp4" type="video/mp4" />
+              </video>
+            </div>
           : null}    
 
           {modalDAOpen ?
-                        <div className={styles.galleryModal}>
-                          <div className={styles.modalBG} />
-                          <div className={styles.modalClose} onClick={closeModalDA} />
-                          <video className={styles.videoDA} controls autoPlay muted>
-                            <source src="/da.mp4" type="video/mp4" />
-                          </video>
-                        </div>
+            <div className={styles.galleryModal}>
+              <div className={styles.modalBG} />
+              <div className={styles.modalClose} onClick={closeModalDA} />
+              <video className={styles.videoDA} controls autoPlay>
+                <source src="/da.mp4" type="video/mp4" />
+              </video>
+            </div>
           : null}
 
           <div className={styles.modulesContainerExternal}>
