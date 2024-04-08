@@ -70,6 +70,44 @@ export default function Home() {
     setMenuOpen(false)
   }
 
+/***** VIDEO MODALS  *****/
+
+  const [modalMMOpen, setModalMMOpen] = useState(false)
+
+  const openModalMM = () => {
+    setModalMMOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModalMM = () => {
+    setModalMMOpen(false)
+    document.body.style.overflow = 'auto'
+  }
+
+  const [modalDAOpen, setModalDAOpen] = useState(false)
+
+  const openModalDA = () => {
+    setModalDAOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModalDA = () => {
+    setModalDAOpen(false)
+    document.body.style.overflow = 'auto'
+  }
+
+  const [modalRAOpen, setModalRAOpen] = useState(false)
+
+  const openModalRA = () => {
+    setModalRAOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModalRA = () => {
+    setModalRAOpen(false)
+    document.body.style.overflow = 'auto'
+  }
+
     /***** EXTERNAL LINKS *****/
 
     function reanimLink () {
@@ -91,7 +129,33 @@ export default function Home() {
     const linkedinLink = () => {
       window.open('https://br.linkedin.com/company/point-media-oficial');
     }
-  
+
+    /***** EMAIL INPUT *****/
+
+    const [email, setEmail] = useState('')
+
+    const handleInputChange = (event) => {
+        setEmail(event.target.value);
+    }
+
+    const handleSubmit = async () => {
+      try {
+          const response = await fetch('https://api.reanimate.com.br/api/lead', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ email })
+          });
+          if (response.ok) {
+              console.log('Email cadastrado com sucesso!');
+          } else {
+              console.error('Erro ao cadastrar o email:', response.statusText);
+          }
+      } catch (error) {
+          console.error('Erro ao cadastrar o email:', error.message);
+      }
+    }
 
     /***** ANCHORS *****/
 
@@ -253,6 +317,36 @@ export default function Home() {
           <div className={styles.gradient3} />
           <div className={styles.gradient4} />
 
+          {modalMMOpen ?
+              <div className={styles.galleryModal}>
+                <div className={styles.modalBG} />
+                <div className={styles.modalClose} onClick={closeModalMM} />
+                <video className={styles.videoMM} controls autoPlay muted>
+                  <source src="/mm.mp4" type="video/mp4" />
+                </video>
+              </div>
+          : null}
+
+          {modalRAOpen ?
+                        <div className={styles.galleryModal}>
+                          <div className={styles.modalBG} />
+                          <div className={styles.modalClose} onClick={closeModalRA} />
+                          <video className={styles.videoRA} controls autoPlay muted>
+                            <source src="/ra.mp4" type="video/mp4" />
+                          </video>
+                        </div>
+          : null}    
+
+          {modalDAOpen ?
+                        <div className={styles.galleryModal}>
+                          <div className={styles.modalBG} />
+                          <div className={styles.modalClose} onClick={closeModalDA} />
+                          <video className={styles.videoDA} controls autoPlay muted>
+                            <source src="/da.mp4" type="video/mp4" />
+                          </video>
+                        </div>
+          : null}
+
           <div className={styles.modulesContainerExternal}>
             <div className={styles.modulesContainer}>
               <h1>Revolucione a sua operação!</h1>
@@ -271,7 +365,7 @@ export default function Home() {
                 <div className={styles.modulesDetailsContainerInfos}>
                   <div className={styles.logoMM} />
                   <p>Dê vida às suas criações de forma simples, e criativa, transformando elementos estáticos, em animações de alto nível. De maneira rápida, fácil e totalmente no code.</p>
-                  <div className={styles.buttonMM} onClick={reanimLink} />
+                  <div className={styles.buttonMM} onClick={openModalMM} />
                 </div>
               </div>
 
@@ -279,7 +373,7 @@ export default function Home() {
                 <div className={styles.modulesDetailsContainerInfos}>
                   <div className={styles.logoRA} />
                   <p>Otimize o processo de replicação para diversos formatos em apenas um clique, mantendo a qualidade visual. Mudou alguma informação? Altere rapidamente de modo automático toda sua linha criativa.</p>
-                  <div className={styles.buttonRA} onClick={reanimLink} />
+                  <div className={styles.buttonRA} onClick={openModalRA} />
                 </div>
                 <div className={styles.pcRA} ref={raRef}/>
               </div>
@@ -289,7 +383,7 @@ export default function Home() {
                 <div className={styles.modulesDetailsContainerInfos}>
                   <div className={styles.logoDA} />
                   <p>Em casos onde existem muitos produtos e ofertas a serem publicados, crie um feed com inúmeras variações de conteúdos em um só lugar utilizando apenas o KV.</p>
-                  <div className={styles.buttonDA} onClick={reanimLink} />
+                  <div className={styles.buttonDA} onClick={openModalDA} />
                 </div>
               </div>
 
@@ -971,8 +1065,10 @@ export default function Home() {
               </div>
               <div className={styles.footerSubscribe}>
                 <h2>Siga-nos para mais informações:</h2>
-                <input placeholder='seuemail@seudominio.com.br' className={styles.footerInput}/>
-                <div className={styles.footerButton} onClick={() => alert('Obrigado por se inscrever!')} />
+                <form onSubmit={handleSubmit}>
+                  <input type="email" placeholder="seuemail@seudominio.com.br" className={styles.footerInput} value={email} onChange={handleInputChange} required/>
+                  <div className={styles.footerButton} onClick={handleSubmit} />
+                </form>
               </div>
             </div>
             <div className={styles.footerBottom}>

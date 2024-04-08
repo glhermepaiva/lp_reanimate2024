@@ -54,7 +54,7 @@
     align-items: center;
     position: absolute;
     flex-direction: column;
-    padding: 60px 0 30px 0;
+    padding: 60px 0px 30px 0px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -86,6 +86,11 @@
     font-size: 24px;
     line-height: 28px;
     width: 290px;
+  }
+
+  .containerForm {
+    display: flex;
+    flex-direction: column;
   }
 
   .containerInputs {
@@ -132,6 +137,7 @@
     font-size: 13px;
     border: 1px solid #E8336A;
     margin: 5px 0 5px 0;
+    width: 557px;
   }
 
   .formButton {
@@ -141,6 +147,8 @@
     cursor: pointer;
     transition: 0.5s;
     margin: 20px 0 0 0;
+    border: none;
+    display: block;
   }
 
   .formButton:hover {
@@ -316,6 +324,10 @@
     }
 
     .containerInputs input {
+      width: 400px;
+    }
+
+    .formMessage {
       width: 400px;
     }
 
