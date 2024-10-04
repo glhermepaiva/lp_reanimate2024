@@ -29,7 +29,7 @@ export default function formbr() {
         const isValid = await schema.isValid(formData);
 
         if (isValid) {
-            emailjs.sendForm('service_ibuddku', 'template_reanimate', e.target, 'user_qksKqi9BtojdtprKYCtue')
+            emailjs.sendForm('service_ibuddku', 'template_reanimate', e.target, 'psXKDji6qs060IYw5')
 
             .then((result) => {
                 console.log(result);

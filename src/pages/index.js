@@ -2,14 +2,15 @@ import {useEffect, useRef, useState } from 'react'
 import styles from "../styles/index.module.css";
 import Link from 'next/link'
 import Head from 'next/head'
-
+import { GoogleTagManager } from '@next/third-parties/google'
 import {Swiper, SwiperSlide } from 'swiper/react';
+import { register } from "swiper/element/bundle";
 import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 
-import { register } from "swiper/element/bundle";
+
 
 register();
 
@@ -239,6 +240,8 @@ export default function Home() {
         <title>re.animate | Transforme dias de trabalho em minutos</title>
         <meta name='description' content='Transforme dias de trabalho em minutos com o re.animate.' />
       </Head>
+
+      <GoogleTagManager gtmId="GTM-TRHLJ89B" />
 
       <div className={styles.main}>
 
