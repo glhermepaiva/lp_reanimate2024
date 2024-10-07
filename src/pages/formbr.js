@@ -1,5 +1,5 @@
 import styles from "../styles/formbr.module.css";
-import { useState } from 'react'
+import { sendGTMEvent } from '@next/third-parties/google'
 import Link from 'next/link'
 import Head from 'next/head'
 import * as yup from 'yup'
@@ -70,7 +70,7 @@ export default function formbr() {
                             <input placeholder='Agência/Produto:' className={styles.formAgency} type="text" name="agency"/>
                             <input placeholder='Telefone:' className={styles.formPhone} type="text" name="phone"/>
                             <textarea placeholder='Mensagem:' className={styles.formMessage} type="textarea" name="message"/>
-                            <button className={styles.formButton} />
+                            <button className={styles.formButton} onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'Formulário enviado' })} />
                         </form>
                         </div>
                     </div>
