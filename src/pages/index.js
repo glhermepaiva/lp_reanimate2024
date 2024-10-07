@@ -244,7 +244,7 @@ export default function Home() {
 
       <div className={styles.main}>
 
-        <GoogleTagManager gtmId="GTM-WSB82BZW" />
+        <GoogleTagManager gtmId="GTM-TRHLJ89B" />
 
           <div className={styles.gradient1} />
           <div className={styles.gradient2} />
