@@ -241,9 +241,9 @@ export default function Home() {
         <meta name='description' content='Transforme dias de trabalho em minutos com o re.animate.' />
       </Head>
 
-      <GoogleTagManager gtmId="GTM-WSB82BZW" />
-
       <div className={styles.main}>
+
+        <GoogleTagManager gtmId="GTM-WSB82BZW" />
 
           <div className={styles.gradient1} />
           <div className={styles.gradient2} />
