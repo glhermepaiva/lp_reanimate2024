@@ -292,7 +292,7 @@ export default function Home() {
               <div className={styles.mainText} />
               <p>A plataforma de automação que vai revolucionar sua produção de banner digitais.</p>
               <Link href="/formbr">
-                <div className={styles.mainContrateButton} onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'Formulário enviado' })} />
+                <div className={styles.mainContrateButton} onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'Botão Contrate Agora clicado' })} />
               </Link>
             </div>
             <div className={styles.mainRight}>
