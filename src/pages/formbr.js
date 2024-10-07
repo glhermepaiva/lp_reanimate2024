@@ -1,4 +1,5 @@
 import styles from "../styles/formbr.module.css";
+import { GoogleTagManager } from '@next/third-parties/google'
 import { sendGTMEvent } from '@next/third-parties/google'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -51,6 +52,7 @@ export default function formbr() {
                 <meta name='description' content='Agende sua demo' />
             </Head>
             <div className={styles.main} >
+                <GoogleTagManager gtmId="GTM-WSB82BZW" />
                 <div className={styles.gradient1} />
                 <div className={styles.gradient6} />
                 <div className={styles.formContainerBlur} />
