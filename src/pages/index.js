@@ -2,8 +2,6 @@ import {useEffect, useRef, useState } from 'react'
 import styles from "../styles/index.module.css";
 import Link from 'next/link'
 import Head from 'next/head'
-import { GoogleTagManager } from '@next/third-parties/google'
-import { sendGTMEvent } from '@next/third-parties/google'
 import {Swiper, SwiperSlide } from 'swiper/react';
 import { register } from "swiper/element/bundle";
 import { FreeMode } from 'swiper/modules';
@@ -243,8 +241,6 @@ export default function Home() {
       </Head>
 
       <div className={styles.main}>
-
-        <GoogleTagManager gtmId="GTM-TRHLJ89B" />
 
           <div className={styles.gradient1} />
           <div className={styles.gradient2} />
